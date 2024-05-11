@@ -1051,7 +1051,7 @@ GO
 USE Quanlycongviec
 GO
 
-IF DB_NAME() <> N'QuanLyDuAn' SET NOEXEC ON
+IF DB_NAME() <> N'Quanlycongviec' SET NOEXEC ON
 GO
 
 --
