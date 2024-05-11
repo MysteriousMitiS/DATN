@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="CMS_Logs">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_Logs">
+        <MappingFragment StoreEntitySet="CMS_Logs">
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="IDKey" ColumnName="IDKey" />
+          <ScalarProperty Name="LogModule" ColumnName="LogModule" />
+          <ScalarProperty Name="LogContent" ColumnName="LogContent" />
+          <ScalarProperty Name="LogTitle" ColumnName="LogTitle" />
+          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMS_News">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_News">
+        <MappingFragment StoreEntitySet="CMS_News">
+          <ScalarProperty Name="IPduyet" ColumnName="IPduyet" />
+          <ScalarProperty Name="Ngayduyet" ColumnName="Ngayduyet" />
+          <ScalarProperty Name="Nguoiduyet" ColumnName="Nguoiduyet" />
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="IsVisitor" ColumnName="IsVisitor" />
+          <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="IsWriter" ColumnName="IsWriter" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="News_Name" ColumnName="News_Name" />
+          <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+          <ScalarProperty Name="NewType" ColumnName="NewType" />
+          <ScalarProperty Name="IsLang" ColumnName="IsLang" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="News_ID" ColumnName="News_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMS_Lang">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_Lang">
+        <MappingFragment StoreEntitySet="CMS_Lang">
+          <ScalarProperty Name="IsAppcapnhat" ColumnName="IsAppcapnhat" />
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="Islogo" ColumnName="Islogo" />
+          <ScalarProperty Name="Macode" ColumnName="Macode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMS_Menu">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_Menu">
+        <MappingFragment StoreEntitySet="CMS_Menu">
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="IsTarget" ColumnName="IsTarget" />
+          <ScalarProperty Name="IsVitri" ColumnName="IsVitri" />
+          <ScalarProperty Name="IsLink" ColumnName="IsLink" />
+          <ScalarProperty Name="IsLang" ColumnName="IsLang" />
+          <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+          <ScalarProperty Name="Menu_Name" ColumnName="Menu_Name" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMS_SlideShow">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_SlideShow">
+        <MappingFragment StoreEntitySet="CMS_SlideShow">
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="IsLang" ColumnName="IsLang" />
+          <ScalarProperty Name="SlideShow_Name" ColumnName="SlideShow_Name" />
+          <ScalarProperty Name="SlideShow_ID" ColumnName="SlideShow_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMS_SlideShowImage">
+      <EntityTypeMapping TypeName="ProjectModel.CMS_SlideShowImage">
+        <MappingFragment StoreEntitySet="CMS_SlideShowImage">
+          <ScalarProperty Name="tokencapnhat_id" ColumnName="tokencapnhat_id" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="IsLink" ColumnName="IsLink" />
+          <ScalarProperty Name="IsFilePath" ColumnName="IsFilePath" />
+          <ScalarProperty Name="Des" ColumnName="Des" />
+          <ScalarProperty Name="Image_Name" ColumnName="Image_Name" />
+          <ScalarProperty Name="SlideShow_ID" ColumnName="SlideShow_ID" />
+          <ScalarProperty Name="Image_ID" ColumnName="Image_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SQL_Log">
+      <EntityTypeMapping TypeName="ProjectModel.SQL_Log">
+        <MappingFragment StoreEntitySet="SQL_Log">
+          <ScalarProperty Name="SearchName" ColumnName="SearchName" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="SoMiliGiay" ColumnName="SoMiliGiay" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="logcontent" ColumnName="logcontent" />
+          <ScalarProperty Name="controller" ColumnName="controller" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Donvi">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Donvi">
+        <MappingFragment StoreEntitySet="Sys_Donvi">
+          <ScalarProperty Name="Maunen" ColumnName="Maunen" />
+          <ScalarProperty Name="Mauchu" ColumnName="Mauchu" />
+          <ScalarProperty Name="IsDonvi" ColumnName="IsDonvi" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="IsUrl" ColumnName="IsUrl" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="TenDonvi" ColumnName="TenDonvi" />
+          <ScalarProperty Name="Capcha_ID" ColumnName="Capcha_ID" />
+          <ScalarProperty Name="Donvi_ID" ColumnName="Donvi_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_FireBase">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_FireBase">
+        <MappingFragment StoreEntitySet="Sys_FireBase">
+          <ScalarProperty Name="isType" ColumnName="isType" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="dName" ColumnName="dName" />
+          <ScalarProperty Name="ngayThem" ColumnName="ngayThem" />
+          <ScalarProperty Name="token_id" ColumnName="token_id" />
+          <ScalarProperty Name="TokenCMID" ColumnName="TokenCMID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="IDKey" ColumnName="IDKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Logs">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Logs">
+        <MappingFragment StoreEntitySet="Sys_Logs">
+          <ScalarProperty Name="SearchName" ColumnName="SearchName" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="module" ColumnName="module" />
+          <ScalarProperty Name="loai" ColumnName="loai" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="logcontent" ColumnName="logcontent" />
+          <ScalarProperty Name="logdate" ColumnName="logdate" />
+          <ScalarProperty Name="controller" ColumnName="controller" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Modules">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Modules">
+        <MappingFragment StoreEntitySet="Sys_Modules">
+          <ScalarProperty Name="IsLang" ColumnName="IsLang" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="IsTarget" ColumnName="IsTarget" />
+          <ScalarProperty Name="IsVitri" ColumnName="IsVitri" />
+          <ScalarProperty Name="IsFilePath" ColumnName="IsFilePath" />
+          <ScalarProperty Name="IsLink" ColumnName="IsLink" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Anh" ColumnName="Anh" />
+          <ScalarProperty Name="Module_Name" ColumnName="Module_Name" />
+          <ScalarProperty Name="Capcha_ID" ColumnName="Capcha_ID" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_RoleModule">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_RoleModule">
+        <MappingFragment StoreEntitySet="Sys_RoleModule">
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="IsQuyen" ColumnName="IsQuyen" />
+          <ScalarProperty Name="IsCap" ColumnName="IsCap" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="RoleModule_ID" ColumnName="RoleModule_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Roles">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Roles">
+        <MappingFragment StoreEntitySet="Sys_Roles">
+          <ScalarProperty Name="Maunen" ColumnName="Maunen" />
+          <ScalarProperty Name="Mauchu" ColumnName="Mauchu" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_SendHub">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_SendHub">
+        <MappingFragment StoreEntitySet="Sys_SendHub">
+          <ScalarProperty Name="token_id" ColumnName="token_id" />
+          <ScalarProperty Name="groupID" ColumnName="groupID" />
+          <ScalarProperty Name="idKey" ColumnName="idKey" />
+          <ScalarProperty Name="ngayDoc" ColumnName="ngayDoc" />
+          <ScalarProperty Name="doc" ColumnName="doc" />
+          <ScalarProperty Name="ngayGui" ColumnName="ngayGui" />
+          <ScalarProperty Name="isType" ColumnName="isType" />
+          <ScalarProperty Name="loai" ColumnName="loai" />
+          <ScalarProperty Name="noiDungNoti" ColumnName="noiDungNoti" />
+          <ScalarProperty Name="noiDung" ColumnName="noiDung" />
+          <ScalarProperty Name="tieuDe" ColumnName="tieuDe" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="nguoiNhan" ColumnName="nguoiNhan" />
+          <ScalarProperty Name="nguoiGui" ColumnName="nguoiGui" />
+          <ScalarProperty Name="sendHubID" ColumnName="sendHubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Token">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Token">
+        <MappingFragment StoreEntitySet="Sys_Token">
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="FromDivice" ColumnName="FromDivice" />
+          <ScalarProperty Name="NgayHet" ColumnName="NgayHet" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Users">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_Users">
+        <MappingFragment StoreEntitySet="Sys_Users">
+          <ScalarProperty Name="Tokentao_ID" ColumnName="Tokentao_ID" />
+          <ScalarProperty Name="IPtao" ColumnName="IPtao" />
+          <ScalarProperty Name="Nguoitao" ColumnName="Nguoitao" />
+          <ScalarProperty Name="Ngaytao" ColumnName="Ngaytao" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="SolanSaiPass" ColumnName="SolanSaiPass" />
+          <ScalarProperty Name="KeyEncript" ColumnName="KeyEncript" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IsPassWord" ColumnName="IsPassWord" />
+          <ScalarProperty Name="Avartar" ColumnName="Avartar" />
+          <ScalarProperty Name="Phongban_ID" ColumnName="Phongban_ID" />
+          <ScalarProperty Name="Donvi_ID" ColumnName="Donvi_ID" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_WebAcess">
+      <EntityTypeMapping TypeName="ProjectModel.Sys_WebAcess">
+        <MappingFragment StoreEntitySet="Sys_WebAcess">
+          <ScalarProperty Name="SearchName" ColumnName="SearchName" />
+          <ScalarProperty Name="FromDivice" ColumnName="FromDivice" />
+          <ScalarProperty Name="FromIP" ColumnName="FromIP" />
+          <ScalarProperty Name="IsEndTime" ColumnName="IsEndTime" />
+          <ScalarProperty Name="IsTime" ColumnName="IsTime" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Users_ID" ColumnName="Users_ID" />
+          <ScalarProperty Name="WebAcess_ID" ColumnName="WebAcess_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Test_Case">
+      <EntityTypeMapping TypeName="ProjectModel.Test_Case">
+        <MappingFragment StoreEntitySet="Test_Case">
+          <ScalarProperty Name="ShowChrome" ColumnName="ShowChrome" />
+          <ScalarProperty Name="IsUrl" ColumnName="IsUrl" />
+          <ScalarProperty Name="NgayTest" ColumnName="NgayTest" />
+          <ScalarProperty Name="CodeTest" ColumnName="CodeTest" />
+          <ScalarProperty Name="FileTest" ColumnName="FileTest" />
+          <ScalarProperty Name="IsPassStep" ColumnName="IsPassStep" />
+          <ScalarProperty Name="SoTestPass" ColumnName="SoTestPass" />
+          <ScalarProperty Name="SoTest" ColumnName="SoTest" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Tokentao_ID" ColumnName="Tokentao_ID" />
+          <ScalarProperty Name="IPtao" ColumnName="IPtao" />
+          <ScalarProperty Name="Nguoitao" ColumnName="Nguoitao" />
+          <ScalarProperty Name="Ngaytao" ColumnName="Ngaytao" />
+          <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Tukhoa" ColumnName="Tukhoa" />
+          <ScalarProperty Name="Congviec_ID" ColumnName="Congviec_ID" />
+          <ScalarProperty Name="Duan_ID" ColumnName="Duan_ID" />
+          <ScalarProperty Name="Case_Name" ColumnName="Case_Name" />
+          <ScalarProperty Name="Case_ID" ColumnName="Case_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Test_Lan">
+      <EntityTypeMapping TypeName="ProjectModel.Test_Lan">
+        <MappingFragment StoreEntitySet="Test_Lan">
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Ketthuc" ColumnName="Ketthuc" />
+          <ScalarProperty Name="Batdau" ColumnName="Batdau" />
+          <ScalarProperty Name="IsPassStep" ColumnName="IsPassStep" />
+          <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Case_ID" ColumnName="Case_ID" />
+          <ScalarProperty Name="Lan_ID" ColumnName="Lan_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Test_Step">
+      <EntityTypeMapping TypeName="ProjectModel.Test_Step">
+        <MappingFragment StoreEntitySet="Test_Step">
+          <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Ketthuc" ColumnName="Ketthuc" />
+          <ScalarProperty Name="Batdau" ColumnName="Batdau" />
+          <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Case_ID" ColumnName="Case_ID" />
+          <ScalarProperty Name="Lan_ID" ColumnName="Lan_ID" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Step_Name" ColumnName="Step_Name" />
+          <ScalarProperty Name="Step_ID" ColumnName="Step_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

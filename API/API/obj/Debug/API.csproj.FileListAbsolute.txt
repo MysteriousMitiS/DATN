@@ -1,0 +1,873 @@
+C:\Code\Vue\API\API\bin\Magick.Native-Q16-x64.dll
+C:\Code\Vue\API\API\bin\Magick.Native-Q16-x86.dll
+C:\Code\Vue\API\API\bin\API.dll.config
+C:\Code\Vue\API\API\bin\API.dll
+C:\Code\Vue\API\API\bin\API.pdb
+C:\Code\Vue\API\API\bin\roslyn\csc.exe
+C:\Code\Vue\API\API\bin\roslyn\csc.exe.config
+C:\Code\Vue\API\API\bin\roslyn\csc.rsp
+C:\Code\Vue\API\API\bin\roslyn\csi.exe
+C:\Code\Vue\API\API\bin\roslyn\csi.exe.config
+C:\Code\Vue\API\API\bin\roslyn\csi.rsp
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Code\Vue\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Code\Vue\API\API\bin\roslyn\System.AppContext.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Console.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Code\Vue\API\API\bin\roslyn\System.IO.Compression.dll
+C:\Code\Vue\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Code\Vue\API\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Code\Vue\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Net.Http.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Net.Sockets.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Code\Vue\API\API\bin\roslyn\System.ValueTuple.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Xml.XPath.dll
+C:\Code\Vue\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Code\Vue\API\API\bin\roslyn\vbc.exe
+C:\Code\Vue\API\API\bin\roslyn\vbc.exe.config
+C:\Code\Vue\API\API\bin\roslyn\vbc.rsp
+C:\Code\Vue\API\API\bin\roslyn\VBCSCompiler.exe
+C:\Code\Vue\API\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Code\Vue\API\API\bin\Antlr3.Runtime.dll
+C:\Code\Vue\API\API\bin\EntityFramework.dll
+C:\Code\Vue\API\API\bin\EntityFramework.SqlServer.dll
+C:\Code\Vue\API\API\bin\EPPlus.dll
+C:\Code\Vue\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+C:\Code\Vue\API\API\bin\Magick.NET.Core.dll
+C:\Code\Vue\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Code\Vue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Google.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Code\Vue\API\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Code\Vue\API\API\bin\Newtonsoft.Json.dll
+C:\Code\Vue\API\API\bin\Owin.dll
+C:\Code\Vue\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Code\Vue\API\API\bin\System.Net.Http.Formatting.dll
+C:\Code\Vue\API\API\bin\System.Web.Cors.dll
+C:\Code\Vue\API\API\bin\System.Web.Helpers.dll
+C:\Code\Vue\API\API\bin\System.Web.Http.Cors.dll
+C:\Code\Vue\API\API\bin\System.Web.Http.dll
+C:\Code\Vue\API\API\bin\System.Web.Http.Owin.dll
+C:\Code\Vue\API\API\bin\System.Web.Http.WebHost.dll
+C:\Code\Vue\API\API\bin\System.Web.Mvc.dll
+C:\Code\Vue\API\API\bin\System.Web.Optimization.dll
+C:\Code\Vue\API\API\bin\System.Web.Razor.dll
+C:\Code\Vue\API\API\bin\System.Web.WebPages.Deployment.dll
+C:\Code\Vue\API\API\bin\System.Web.WebPages.dll
+C:\Code\Vue\API\API\bin\System.Web.WebPages.Razor.dll
+C:\Code\Vue\API\API\bin\WebGrease.dll
+C:\Code\Vue\API\API\bin\Antlr3.Runtime.pdb
+C:\Code\Vue\API\API\bin\EntityFramework.xml
+C:\Code\Vue\API\API\bin\EntityFramework.SqlServer.xml
+C:\Code\Vue\API\API\bin\EPPlus.xml
+C:\Code\Vue\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+C:\Code\Vue\API\API\bin\Magick.NET.Core.xml
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Code\Vue\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Code\Vue\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Code\Vue\API\API\bin\Newtonsoft.Json.xml
+C:\Code\Vue\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Code\Vue\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Code\Vue\API\API\bin\System.Net.Http.Formatting.xml
+C:\Code\Vue\API\API\bin\System.Web.Http.Cors.xml
+C:\Code\Vue\API\API\bin\System.Web.Http.Owin.xml
+C:\Code\Vue\API\API\bin\System.Web.Helpers.xml
+C:\Code\Vue\API\API\bin\System.Web.Http.xml
+C:\Code\Vue\API\API\bin\System.Web.Http.WebHost.xml
+C:\Code\Vue\API\API\bin\System.Web.Mvc.xml
+C:\Code\Vue\API\API\bin\System.Web.Optimization.xml
+C:\Code\Vue\API\API\bin\System.Web.Razor.xml
+C:\Code\Vue\API\API\bin\System.Web.WebPages.xml
+C:\Code\Vue\API\API\bin\System.Web.WebPages.Deployment.xml
+C:\Code\Vue\API\API\bin\System.Web.WebPages.Razor.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Google.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Code\Vue\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Code\Vue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Code\Vue\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Code\Vue\API\API\obj\Debug\API.csproj.CopyComplete
+C:\Code\Vue\API\API\obj\Debug\API.dll
+C:\Code\Vue\API\API\obj\Debug\API.pdb
+C:\Code\Vue\Github\vue\API\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Code\Vue\Github\vue\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Code\Vue\Github\vue\API\API\bin\Magick.Native-Q16-x64.dll
+C:\Code\Vue\Github\vue\API\API\bin\Magick.Native-Q16-x86.dll
+C:\Code\Vue\Github\vue\API\API\bin\API.dll.config
+C:\Code\Vue\Github\vue\API\API\bin\API.dll
+C:\Code\Vue\Github\vue\API\API\bin\API.pdb
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csc.exe
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csc.exe.config
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csc.rsp
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csi.exe
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csi.exe.config
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\csi.rsp
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.AppContext.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Console.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.IO.Compression.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Net.Http.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Net.Sockets.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.ValueTuple.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Xml.XPath.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\vbc.exe
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\vbc.exe.config
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\vbc.rsp
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\VBCSCompiler.exe
+C:\Code\Vue\Github\vue\API\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Code\Vue\Github\vue\API\API\bin\Antlr3.Runtime.dll
+C:\Code\Vue\Github\vue\API\API\bin\EntityFramework.dll
+C:\Code\Vue\Github\vue\API\API\bin\EntityFramework.SqlServer.dll
+C:\Code\Vue\Github\vue\API\API\bin\EPPlus.dll
+C:\Code\Vue\Github\vue\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+C:\Code\Vue\Github\vue\API\API\bin\Magick.NET.Core.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Google.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Code\Vue\Github\vue\API\API\bin\Newtonsoft.Json.dll
+C:\Code\Vue\Github\vue\API\API\bin\Owin.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Net.Http.Formatting.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Cors.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Helpers.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.Cors.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.Owin.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.WebHost.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Mvc.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Optimization.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Razor.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.Deployment.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.dll
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.Razor.dll
+C:\Code\Vue\Github\vue\API\API\bin\WebGrease.dll
+C:\Code\Vue\Github\vue\API\API\bin\Antlr3.Runtime.pdb
+C:\Code\Vue\Github\vue\API\API\bin\EntityFramework.xml
+C:\Code\Vue\Github\vue\API\API\bin\EntityFramework.SqlServer.xml
+C:\Code\Vue\Github\vue\API\API\bin\EPPlus.xml
+C:\Code\Vue\Github\vue\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+C:\Code\Vue\Github\vue\API\API\bin\Magick.NET.Core.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Code\Vue\Github\vue\API\API\bin\Newtonsoft.Json.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Code\Vue\Github\vue\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Net.Http.Formatting.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.Cors.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.Owin.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Helpers.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Http.WebHost.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Mvc.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Optimization.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.Razor.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.Deployment.xml
+C:\Code\Vue\Github\vue\API\API\bin\System.Web.WebPages.Razor.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Google.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Code\Vue\Github\vue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Code\Vue\Github\vue\API\API\obj\Debug\API.csproj.CopyComplete
+C:\Code\Vue\Github\vue\API\API\obj\Debug\API.dll
+C:\Code\Vue\Github\vue\API\API\obj\Debug\API.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.Native-Q16-x64.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.Native-Q16-x86.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\API.dll.config
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\API.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\API.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csc.exe
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csc.exe.config
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csc.rsp
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csi.exe
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csi.exe.config
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\csi.rsp
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.AppContext.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Collections.Immutable.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Console.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Globalization.Calendars.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.IO.Compression.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Net.Http.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Net.Sockets.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Reflection.Metadata.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.ValueTuple.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Xml.XPath.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\vbc.exe
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\vbc.exe.config
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\vbc.rsp
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe.config
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Antlr3.Runtime.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EntityFramework.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EntityFramework.SqlServer.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EPPlus.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.NET.Core.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Web.Infrastructure.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Newtonsoft.Json.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Owin.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.ComponentModel.Annotations.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Net.Http.Formatting.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Cors.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Helpers.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.Cors.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.Owin.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.WebHost.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Mvc.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Optimization.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Razor.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.Deployment.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.Razor.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\WebGrease.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Antlr3.Runtime.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EntityFramework.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EntityFramework.SqlServer.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\EPPlus.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Magick.NET.Core.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Newtonsoft.Json.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Net.Http.Formatting.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.Cors.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.Owin.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Helpers.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Http.WebHost.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Mvc.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Optimization.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.Razor.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.Deployment.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\System.Web.WebPages.Razor.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+E:\ORIENTSoft\OS\cmsvue\API\API\obj\Debug\API.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\obj\Debug\API.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\HtmlAgilityPack.dll
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\HtmlAgilityPack.pdb
+E:\ORIENTSoft\OS\cmsvue\API\API\bin\HtmlAgilityPack.xml
+E:\ORIENTSoft\OS\cmsvue\API\API\obj\Debug\API.csproj.AssemblyReference.cache
+E:\Đồ án tốt nghiệp\cmsvue\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+E:\Đồ án tốt nghiệp\cmsvue\API\API\obj\Debug\API.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\obj\Debug\API.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.Native-Q16-x64.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.Native-Q16-x86.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\API.dll.config
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\API.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\API.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csc.exe
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csc.exe.config
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csc.rsp
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csi.exe
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csi.exe.config
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\csi.rsp
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.AppContext.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Collections.Immutable.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Console.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Globalization.Calendars.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.IO.Compression.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Net.Http.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Net.Sockets.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Reflection.Metadata.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.ValueTuple.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Xml.XPath.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\vbc.exe
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\vbc.exe.config
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\vbc.rsp
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe.config
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Antlr3.Runtime.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EntityFramework.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EntityFramework.SqlServer.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EPPlus.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\HtmlAgilityPack.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.NET.Core.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Web.Infrastructure.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Newtonsoft.Json.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Owin.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.ComponentModel.Annotations.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Net.Http.Formatting.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Cors.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Helpers.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.Cors.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.Owin.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.WebHost.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Mvc.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Optimization.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Razor.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.Deployment.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.Razor.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\WebGrease.dll
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Antlr3.Runtime.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EntityFramework.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EntityFramework.SqlServer.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\EPPlus.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\HtmlAgilityPack.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\HtmlAgilityPack.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Magick.NET.Core.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Newtonsoft.Json.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Net.Http.Formatting.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.Cors.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.Owin.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Helpers.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Http.WebHost.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Mvc.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Optimization.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.Razor.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.Deployment.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\System.Web.WebPages.Razor.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Đồ án tốt nghiệp\cmsvue\API\API\obj\Debug\API.csproj.CopyComplete
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.Native-Q16-x64.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.Native-Q16-x86.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\API.dll.config
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\API.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\API.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csc.exe
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csc.exe.config
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csc.rsp
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csi.exe
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csi.exe.config
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\csi.rsp
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.AppContext.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Console.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Net.Http.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\vbc.exe
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\vbc.exe.config
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\vbc.rsp
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Antlr3.Runtime.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EntityFramework.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EntityFramework.SqlServer.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EPPlus.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\HtmlAgilityPack.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.NET.Core.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Newtonsoft.Json.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Owin.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.ComponentModel.Annotations.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Net.Http.Formatting.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Cors.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Helpers.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.Cors.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.Owin.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.WebHost.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Mvc.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Optimization.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Razor.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\WebGrease.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Antlr3.Runtime.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EntityFramework.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EntityFramework.SqlServer.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\EPPlus.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\HtmlAgilityPack.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\HtmlAgilityPack.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Magick.NET.Core.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Newtonsoft.Json.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Net.Http.Formatting.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.Cors.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.Owin.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Helpers.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Http.WebHost.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Mvc.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Optimization.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.Razor.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\obj\Debug\API.csproj.Up2Date
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\obj\Debug\API.dll
+C:\Users\Mysterious MitiS\Desktop\cmsvue\API\API\obj\Debug\API.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.Native-Q16-x64.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.Native-Q16-x86.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\API.dll.config
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\API.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\API.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csc.exe
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csc.exe.config
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csc.rsp
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csi.exe
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csi.exe.config
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\csi.rsp
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Console.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Net.Http.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\vbc.exe
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\vbc.rsp
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EntityFramework.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EPPlus.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\HtmlAgilityPack.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.NET-Q16-AnyCPU.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.NET.Core.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Owin.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.ComponentModel.Annotations.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Cors.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Helpers.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.Cors.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.Owin.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.WebHost.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Mvc.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Optimization.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Razor.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\WebGrease.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EntityFramework.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\EPPlus.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\HtmlAgilityPack.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\HtmlAgilityPack.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.NET-Q16-AnyCPU.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Magick.NET.Core.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.Cors.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.Owin.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Helpers.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Http.WebHost.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Mvc.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Optimization.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.Razor.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Downloads\DATN\DATN\API\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\Dell\Downloads\DATN\DATN\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Downloads\DATN\DATN\API\API\obj\Debug\API.csproj.Up2Date
+C:\Users\Dell\Downloads\DATN\DATN\API\API\obj\Debug\API.dll
+C:\Users\Dell\Downloads\DATN\DATN\API\API\obj\Debug\API.pdb

@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CMS_Lang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Macode" Type="varchar" MaxLength="50" />
+    <Property Name="Islogo" Type="nvarchar" MaxLength="250" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="IsMain" Type="bit" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+    <Property Name="IsAppcapnhat" Type="bit" />
+  </EntityType>
+  <EntityType Name="CMS_Logs">
+    <Key>
+      <PropertyRef Name="Log_ID" />
+    </Key>
+    <Property Name="Log_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogTitle" Type="nvarchar" MaxLength="500" />
+    <Property Name="LogContent" Type="nvarchar(max)" />
+    <Property Name="LogModule" Type="nvarchar" MaxLength="500" />
+    <Property Name="IDKey" Type="varchar" MaxLength="50" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CMS_Menu">
+    <Key>
+      <PropertyRef Name="Menu_ID" />
+    </Key>
+    <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Menu_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Parent_ID" Type="int" Nullable="false" />
+    <Property Name="IsLang" Type="int" Nullable="false" />
+    <Property Name="IsLink" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsVitri" Type="varchar" MaxLength="50" />
+    <Property Name="IsTarget" Type="varchar" MaxLength="50" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CMS_News">
+    <Key>
+      <PropertyRef Name="News_ID" />
+    </Key>
+    <Property Name="News_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Menu_ID" Type="int" />
+    <Property Name="IsLang" Type="int" />
+    <Property Name="NewType" Type="int" />
+    <Property Name="IsHot" Type="bit" />
+    <Property Name="News_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="varchar" MaxLength="50" />
+    <Property Name="Contents" Type="nvarchar(max)" />
+    <Property Name="Details" Type="nvarchar(max)" />
+    <Property Name="Keywords" Type="nvarchar(max)" />
+    <Property Name="IsWriter" Type="nvarchar" MaxLength="500" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateIP" Type="varchar" MaxLength="50" />
+    <Property Name="IsVisitor" Type="int" />
+    <Property Name="Trangthai" Type="int" />
+    <Property Name="STT" Type="int" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoiduyet" Type="varchar" MaxLength="50" />
+    <Property Name="Ngayduyet" Type="datetime" />
+    <Property Name="IPduyet" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CMS_SlideShow">
+    <Key>
+      <PropertyRef Name="SlideShow_ID" />
+    </Key>
+    <Property Name="SlideShow_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SlideShow_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsLang" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CMS_SlideShowImage">
+    <Key>
+      <PropertyRef Name="Image_ID" />
+    </Key>
+    <Property Name="Image_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SlideShow_ID" Type="int" Nullable="false" />
+    <Property Name="Image_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Des" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFilePath" Type="varchar" MaxLength="500" />
+    <Property Name="IsLink" Type="nvarchar" MaxLength="500" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="tokencapnhat_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SQL_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="controller" Type="varchar" MaxLength="250" />
+    <Property Name="logcontent" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="SoMiliGiay" Type="int" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="SearchName" Type="nvarchar" MaxLength="403" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Donvi">
+    <Key>
+      <PropertyRef Name="Donvi_ID" />
+    </Key>
+    <Property Name="Donvi_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Capcha_ID" Type="int" />
+    <Property Name="TenDonvi" Type="nvarchar" MaxLength="500" />
+    <Property Name="Logo" Type="varchar" MaxLength="500" />
+    <Property Name="IsUrl" Type="varchar" MaxLength="500" />
+    <Property Name="STT" Type="int" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="IsDonvi" Type="bit" />
+    <Property Name="Mauchu" Type="varchar" MaxLength="50" />
+    <Property Name="Maunen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_FireBase">
+    <Key>
+      <PropertyRef Name="IDKey" />
+    </Key>
+    <Property Name="IDKey" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TokenCMID" Type="varchar" MaxLength="500" />
+    <Property Name="token_id" Type="varchar" MaxLength="50" />
+    <Property Name="ngayThem" Type="datetime" Nullable="false" />
+    <Property Name="dName" Type="nvarchar" MaxLength="500" />
+    <Property Name="FName" Type="nvarchar" MaxLength="500" />
+    <Property Name="isType" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_Logs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="controller" Type="varchar" MaxLength="250" />
+    <Property Name="logdate" Type="datetime" />
+    <Property Name="logcontent" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="loai" Type="int" />
+    <Property Name="module" Type="varchar" MaxLength="50" />
+    <Property Name="Trangthai" Type="int" />
+    <Property Name="Ghichu" Type="nvarchar(max)" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="SearchName" Type="nvarchar" MaxLength="853" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Modules">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Capcha_ID" Type="int" />
+    <Property Name="Module_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Anh" Type="varchar" MaxLength="250" />
+    <Property Name="Icon" Type="varchar" MaxLength="250" />
+    <Property Name="IsLink" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsFilePath" Type="varchar" MaxLength="500" />
+    <Property Name="IsVitri" Type="varchar" MaxLength="50" />
+    <Property Name="IsTarget" Type="varchar" MaxLength="50" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Role_ID" Type="varchar" MaxLength="50" />
+    <Property Name="IsLang" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_RoleModule">
+    <Key>
+      <PropertyRef Name="RoleModule_ID" />
+    </Key>
+    <Property Name="RoleModule_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Module_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsCap" Type="int" Nullable="false" />
+    <Property Name="IsQuyen" Type="int" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Roles">
+    <Key>
+      <PropertyRef Name="Role_ID" />
+    </Key>
+    <Property Name="Role_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="Mauchu" Type="varchar" MaxLength="50" />
+    <Property Name="Maunen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_SendHub">
+    <Key>
+      <PropertyRef Name="sendHubID" />
+    </Key>
+    <Property Name="sendHubID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nguoiGui" Type="varchar" MaxLength="50" />
+    <Property Name="nguoiNhan" Type="varchar" MaxLength="50" />
+    <Property Name="icon" Type="nvarchar" MaxLength="500" />
+    <Property Name="tieuDe" Type="nvarchar" MaxLength="500" />
+    <Property Name="noiDung" Type="nvarchar" MaxLength="500" />
+    <Property Name="noiDungNoti" Type="nvarchar" MaxLength="500" />
+    <Property Name="loai" Type="int" Nullable="false" />
+    <Property Name="isType" Type="int" Nullable="false" />
+    <Property Name="ngayGui" Type="datetime" />
+    <Property Name="doc" Type="bit" Nullable="false" />
+    <Property Name="ngayDoc" Type="datetime" />
+    <Property Name="idKey" Type="varchar" MaxLength="50" />
+    <Property Name="groupID" Type="varchar" MaxLength="50" />
+    <Property Name="token_id" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Token">
+    <Key>
+      <PropertyRef Name="Token_ID" />
+    </Key>
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ngay" Type="datetime" />
+    <Property Name="NgayHet" Type="datetime" />
+    <Property Name="FromDivice" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Users">
+    <Key>
+      <PropertyRef Name="Users_ID" />
+    </Key>
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Donvi_ID" Type="int" />
+    <Property Name="Phongban_ID" Type="int" />
+    <Property Name="Avartar" Type="varchar" MaxLength="500" />
+    <Property Name="IsPassWord" Type="varchar" MaxLength="25" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="KeyEncript" Type="varchar" MaxLength="50" />
+    <Property Name="SolanSaiPass" Type="int" />
+    <Property Name="STT" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="int" Nullable="false" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Role_ID" Type="varchar" MaxLength="50" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="Ngaytao" Type="datetime" />
+    <Property Name="Nguoitao" Type="varchar" MaxLength="50" />
+    <Property Name="IPtao" Type="varchar" MaxLength="50" />
+    <Property Name="Tokentao_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_WebAcess">
+    <Key>
+      <PropertyRef Name="WebAcess_ID" />
+    </Key>
+    <Property Name="WebAcess_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Users_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsTime" Type="datetime" Nullable="false" />
+    <Property Name="IsEndTime" Type="datetime" />
+    <Property Name="FromIP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FromDivice" Type="varchar" MaxLength="50" />
+    <Property Name="SearchName" Type="nvarchar" MaxLength="403" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Test_Case">
+    <Key>
+      <PropertyRef Name="Case_ID" />
+    </Key>
+    <Property Name="Case_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Case_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Duan_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Congviec_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Tukhoa" Type="nvarchar" MaxLength="2500" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="2500" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="STT" Type="int" />
+    <Property Name="IsPass" Type="bit" />
+    <Property Name="Ngaytao" Type="datetime" />
+    <Property Name="Nguoitao" Type="varchar" MaxLength="50" />
+    <Property Name="IPtao" Type="varchar" MaxLength="50" />
+    <Property Name="Tokentao_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="SoTest" Type="int" />
+    <Property Name="SoTestPass" Type="int" />
+    <Property Name="IsPassStep" Type="int" />
+    <Property Name="FileTest" Type="varchar" MaxLength="500" />
+    <Property Name="CodeTest" Type="nvarchar(max)" />
+    <Property Name="NgayTest" Type="datetime" />
+    <Property Name="IsUrl" Type="varchar" MaxLength="500" />
+    <Property Name="ShowChrome" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Test_Lan">
+    <Key>
+      <PropertyRef Name="Lan_ID" />
+    </Key>
+    <Property Name="Lan_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Case_ID" Type="int" Nullable="false" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="2500" />
+    <Property Name="IsPass" Type="bit" />
+    <Property Name="IsPassStep" Type="int" />
+    <Property Name="Batdau" Type="datetime" />
+    <Property Name="Ketthuc" Type="datetime" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Test_Step">
+    <Key>
+      <PropertyRef Name="Step_ID" />
+    </Key>
+    <Property Name="Step_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Step_Name" Type="nvarchar" MaxLength="2500" Nullable="false" />
+    <Property Name="STT" Type="int" />
+    <Property Name="Lan_ID" Type="int" Nullable="false" />
+    <Property Name="Case_ID" Type="int" Nullable="false" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="2500" />
+    <Property Name="IsPass" Type="bit" />
+    <Property Name="Batdau" Type="datetime" />
+    <Property Name="Ketthuc" Type="datetime" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Hinhanh" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK_CMS_News_CMS_Menu">
+    <End Role="CMS_Menu" Type="Self.CMS_Menu" Multiplicity="0..1" />
+    <End Role="CMS_News" Type="Self.CMS_News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CMS_Menu">
+        <PropertyRef Name="Menu_ID" />
+      </Principal>
+      <Dependent Role="CMS_News">
+        <PropertyRef Name="Menu_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Users_Sys_Roles">
+    <End Role="Sys_Roles" Type="Self.Sys_Roles" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Users" Type="Self.Sys_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Roles">
+        <PropertyRef Name="Role_ID" />
+      </Principal>
+      <Dependent Role="Sys_Users">
+        <PropertyRef Name="Role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_Lan_Test_Case">
+    <End Role="Test_Case" Type="Self.Test_Case" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Test_Lan" Type="Self.Test_Lan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test_Case">
+        <PropertyRef Name="Case_ID" />
+      </Principal>
+      <Dependent Role="Test_Lan">
+        <PropertyRef Name="Case_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_Step_Test_Lan">
+    <End Role="Test_Lan" Type="Self.Test_Lan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Test_Step" Type="Self.Test_Step" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test_Lan">
+        <PropertyRef Name="Lan_ID" />
+      </Principal>
+      <Dependent Role="Test_Step">
+        <PropertyRef Name="Lan_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProjectModelStoreContainer">
+    <EntitySet Name="CMS_Lang" EntityType="Self.CMS_Lang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMS_Logs" EntityType="Self.CMS_Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMS_Menu" EntityType="Self.CMS_Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMS_News" EntityType="Self.CMS_News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMS_SlideShow" EntityType="Self.CMS_SlideShow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CMS_SlideShowImage" EntityType="Self.CMS_SlideShowImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SQL_Log" EntityType="Self.SQL_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Donvi" EntityType="Self.Sys_Donvi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_FireBase" EntityType="Self.Sys_FireBase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Logs" EntityType="Self.Sys_Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Modules" EntityType="Self.Sys_Modules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_RoleModule" EntityType="Self.Sys_RoleModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Roles" EntityType="Self.Sys_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_SendHub" EntityType="Self.Sys_SendHub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Token" EntityType="Self.Sys_Token" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Users" EntityType="Self.Sys_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_WebAcess" EntityType="Self.Sys_WebAcess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test_Case" EntityType="Self.Test_Case" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test_Lan" EntityType="Self.Test_Lan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test_Step" EntityType="Self.Test_Step" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CMS_News_CMS_Menu" Association="Self.FK_CMS_News_CMS_Menu">
+      <End Role="CMS_Menu" EntitySet="CMS_Menu" />
+      <End Role="CMS_News" EntitySet="CMS_News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Users_Sys_Roles" Association="Self.FK_Sys_Users_Sys_Roles">
+      <End Role="Sys_Roles" EntitySet="Sys_Roles" />
+      <End Role="Sys_Users" EntitySet="Sys_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_Lan_Test_Case" Association="Self.FK_Test_Lan_Test_Case">
+      <End Role="Test_Case" EntitySet="Test_Case" />
+      <End Role="Test_Lan" EntitySet="Test_Lan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_Step_Test_Lan" Association="Self.FK_Test_Step_Test_Lan">
+      <End Role="Test_Lan" EntitySet="Test_Lan" />
+      <End Role="Test_Step" EntitySet="Test_Step" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

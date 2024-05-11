@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CMS_Logs" EntityType="ProjectModel.CMS_Logs" />
+    <EntitySet Name="CMS_News" EntityType="ProjectModel.CMS_News" />
+    <EntitySet Name="CMS_Lang" EntityType="ProjectModel.CMS_Lang" />
+    <EntitySet Name="CMS_Menu" EntityType="ProjectModel.CMS_Menu" />
+    <EntitySet Name="CMS_SlideShow" EntityType="ProjectModel.CMS_SlideShow" />
+    <EntitySet Name="CMS_SlideShowImage" EntityType="ProjectModel.CMS_SlideShowImage" />
+    <EntitySet Name="SQL_Log" EntityType="ProjectModel.SQL_Log" />
+    <EntitySet Name="Sys_Donvi" EntityType="ProjectModel.Sys_Donvi" />
+    <EntitySet Name="Sys_FireBase" EntityType="ProjectModel.Sys_FireBase" />
+    <EntitySet Name="Sys_Logs" EntityType="ProjectModel.Sys_Logs" />
+    <EntitySet Name="Sys_Modules" EntityType="ProjectModel.Sys_Modules" />
+    <EntitySet Name="Sys_RoleModule" EntityType="ProjectModel.Sys_RoleModule" />
+    <EntitySet Name="Sys_Roles" EntityType="ProjectModel.Sys_Roles" />
+    <EntitySet Name="Sys_SendHub" EntityType="ProjectModel.Sys_SendHub" />
+    <EntitySet Name="Sys_Token" EntityType="ProjectModel.Sys_Token" />
+    <EntitySet Name="Sys_Users" EntityType="ProjectModel.Sys_Users" />
+    <EntitySet Name="Sys_WebAcess" EntityType="ProjectModel.Sys_WebAcess" />
+    <EntitySet Name="Test_Case" EntityType="ProjectModel.Test_Case" />
+    <EntitySet Name="Test_Lan" EntityType="ProjectModel.Test_Lan" />
+    <EntitySet Name="Test_Step" EntityType="ProjectModel.Test_Step" />
+    <AssociationSet Name="FK_CMS_News_CMS_Menu" Association="ProjectModel.FK_CMS_News_CMS_Menu">
+      <End Role="CMS_Menu" EntitySet="CMS_Menu" />
+      <End Role="CMS_News" EntitySet="CMS_News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Users_Sys_Roles" Association="ProjectModel.FK_Sys_Users_Sys_Roles">
+      <End Role="Sys_Roles" EntitySet="Sys_Roles" />
+      <End Role="Sys_Users" EntitySet="Sys_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_Lan_Test_Case" Association="ProjectModel.FK_Test_Lan_Test_Case">
+      <End Role="Test_Case" EntitySet="Test_Case" />
+      <End Role="Test_Lan" EntitySet="Test_Lan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_Step_Test_Lan" Association="ProjectModel.FK_Test_Step_Test_Lan">
+      <End Role="Test_Lan" EntitySet="Test_Lan" />
+      <End Role="Test_Step" EntitySet="Test_Step" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CMS_Logs">
+    <Key>
+      <PropertyRef Name="Log_ID" />
+    </Key>
+    <Property Name="Log_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LogContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LogModule" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IDKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMS_News">
+    <Key>
+      <PropertyRef Name="News_ID" />
+    </Key>
+    <Property Name="News_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Menu_ID" Type="Int32" />
+    <Property Name="IsLang" Type="Int32" />
+    <Property Name="NewType" Type="Int32" />
+    <Property Name="IsHot" Type="Boolean" />
+    <Property Name="News_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Keywords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsWriter" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsVisitor" Type="Int32" />
+    <Property Name="Trangthai" Type="Int32" />
+    <Property Name="STT" Type="Int32" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoiduyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngayduyet" Type="DateTime" Precision="3" />
+    <Property Name="IPduyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CMS_Menu" Relationship="ProjectModel.FK_CMS_News_CMS_Menu" FromRole="CMS_News" ToRole="CMS_Menu" />
+  </EntityType>
+  <EntityType Name="CMS_Lang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Macode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Islogo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="IsMain" Type="Boolean" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsAppcapnhat" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CMS_Menu">
+    <Key>
+      <PropertyRef Name="Menu_ID" />
+    </Key>
+    <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Menu_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Parent_ID" Type="Int32" Nullable="false" />
+    <Property Name="IsLang" Type="Int32" Nullable="false" />
+    <Property Name="IsLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsVitri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsTarget" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CMS_News" Relationship="ProjectModel.FK_CMS_News_CMS_Menu" FromRole="CMS_Menu" ToRole="CMS_News" />
+  </EntityType>
+  <EntityType Name="CMS_SlideShow">
+    <Key>
+      <PropertyRef Name="SlideShow_ID" />
+    </Key>
+    <Property Name="SlideShow_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SlideShow_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsLang" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CMS_SlideShowImage">
+    <Key>
+      <PropertyRef Name="Image_ID" />
+    </Key>
+    <Property Name="Image_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SlideShow_ID" Type="Int32" Nullable="false" />
+    <Property Name="Image_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Des" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="tokencapnhat_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SQL_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="controller" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="logcontent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="SoMiliGiay" Type="Int32" />
+    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Users_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SearchName" Type="String" MaxLength="403" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Donvi">
+    <Key>
+      <PropertyRef Name="Donvi_ID" />
+    </Key>
+    <Property Name="Donvi_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Capcha_ID" Type="Int32" />
+    <Property Name="TenDonvi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STT" Type="Int32" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="IsDonvi" Type="Boolean" />
+    <Property Name="Mauchu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maunen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_FireBase">
+    <Key>
+      <PropertyRef Name="IDKey" />
+    </Key>
+    <Property Name="IDKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Users_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TokenCMID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="token_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ngayThem" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sys_Logs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="controller" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="logdate" Type="DateTime" Precision="3" />
+    <Property Name="logcontent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Users_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="loai" Type="Int32" />
+    <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trangthai" Type="Int32" />
+    <Property Name="Ghichu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SearchName" Type="String" MaxLength="853" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Modules">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Capcha_ID" Type="Int32" />
+    <Property Name="Module_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Anh" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Icon" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsVitri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsTarget" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsLang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_RoleModule">
+    <Key>
+      <PropertyRef Name="RoleModule_ID" />
+    </Key>
+    <Property Name="RoleModule_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Users_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Module_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsCap" Type="Int32" Nullable="false" />
+    <Property Name="IsQuyen" Type="Int32" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Roles">
+    <Key>
+      <PropertyRef Name="Role_ID" />
+    </Key>
+    <Property Name="Role_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="Mauchu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Maunen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sys_Users" Relationship="ProjectModel.FK_Sys_Users_Sys_Roles" FromRole="Sys_Roles" ToRole="Sys_Users" />
+  </EntityType>
+  <EntityType Name="Sys_SendHub">
+    <Key>
+      <PropertyRef Name="sendHubID" />
+    </Key>
+    <Property Name="sendHubID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nguoiGui" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nguoiNhan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="tieuDe" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="noiDung" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="noiDungNoti" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="loai" Type="Int32" Nullable="false" />
+    <Property Name="isType" Type="Int32" Nullable="false" />
+    <Property Name="ngayGui" Type="DateTime" Precision="3" />
+    <Property Name="doc" Type="Boolean" Nullable="false" />
+    <Property Name="ngayDoc" Type="DateTime" Precision="3" />
+    <Property Name="idKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="groupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="token_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Token">
+    <Key>
+      <PropertyRef Name="Token_ID" />
+    </Key>
+    <Property Name="Token_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Users_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay" Type="DateTime" Precision="3" />
+    <Property Name="NgayHet" Type="DateTime" Precision="3" />
+    <Property Name="FromDivice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_Users">
+    <Key>
+      <PropertyRef Name="Users_ID" />
+    </Key>
+    <Property Name="Users_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Donvi_ID" Type="Int32" />
+    <Property Name="Phongban_ID" Type="Int32" />
+    <Property Name="Avartar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsPassWord" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KeyEncript" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SolanSaiPass" Type="Int32" />
+    <Property Name="STT" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Int32" Nullable="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="Ngaytao" Type="DateTime" Precision="3" />
+    <Property Name="Nguoitao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPtao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tokentao_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sys_Roles" Relationship="ProjectModel.FK_Sys_Users_Sys_Roles" FromRole="Sys_Users" ToRole="Sys_Roles" />
+  </EntityType>
+  <EntityType Name="Sys_WebAcess">
+    <Key>
+      <PropertyRef Name="WebAcess_ID" />
+    </Key>
+    <Property Name="WebAcess_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Users_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsEndTime" Type="DateTime" Precision="3" />
+    <Property Name="FromIP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FromDivice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SearchName" Type="String" MaxLength="403" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Test_Case">
+    <Key>
+      <PropertyRef Name="Case_ID" />
+    </Key>
+    <Property Name="Case_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Duan_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Congviec_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tukhoa" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="Mota" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="STT" Type="Int32" />
+    <Property Name="IsPass" Type="Boolean" />
+    <Property Name="Ngaytao" Type="DateTime" Precision="3" />
+    <Property Name="Nguoitao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPtao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tokentao_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SoTest" Type="Int32" />
+    <Property Name="SoTestPass" Type="Int32" />
+    <Property Name="IsPassStep" Type="Int32" />
+    <Property Name="FileTest" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeTest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTest" Type="DateTime" Precision="3" />
+    <Property Name="IsUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ShowChrome" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Test_Lan" Relationship="ProjectModel.FK_Test_Lan_Test_Case" FromRole="Test_Case" ToRole="Test_Lan" />
+  </EntityType>
+  <EntityType Name="Test_Lan">
+    <Key>
+      <PropertyRef Name="Lan_ID" />
+    </Key>
+    <Property Name="Lan_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Case_ID" Type="Int32" Nullable="false" />
+    <Property Name="Mota" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="IsPass" Type="Boolean" />
+    <Property Name="IsPassStep" Type="Int32" />
+    <Property Name="Batdau" Type="DateTime" Precision="3" />
+    <Property Name="Ketthuc" Type="DateTime" Precision="3" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Test_Case" Relationship="ProjectModel.FK_Test_Lan_Test_Case" FromRole="Test_Lan" ToRole="Test_Case" />
+    <NavigationProperty Name="Test_Step" Relationship="ProjectModel.FK_Test_Step_Test_Lan" FromRole="Test_Lan" ToRole="Test_Step" />
+  </EntityType>
+  <EntityType Name="Test_Step">
+    <Key>
+      <PropertyRef Name="Step_ID" />
+    </Key>
+    <Property Name="Step_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Step_Name" Type="String" Nullable="false" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="STT" Type="Int32" />
+    <Property Name="Lan_ID" Type="Int32" Nullable="false" />
+    <Property Name="Case_ID" Type="Int32" Nullable="false" />
+    <Property Name="Mota" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <Property Name="IsPass" Type="Boolean" />
+    <Property Name="Batdau" Type="DateTime" Precision="3" />
+    <Property Name="Ketthuc" Type="DateTime" Precision="3" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Nguoicapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IPcapnhat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hinhanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Test_Lan" Relationship="ProjectModel.FK_Test_Step_Test_Lan" FromRole="Test_Step" ToRole="Test_Lan" />
+  </EntityType>
+  <Association Name="FK_CMS_News_CMS_Menu">
+    <End Type="ProjectModel.CMS_Menu" Role="CMS_Menu" Multiplicity="0..1" />
+    <End Type="ProjectModel.CMS_News" Role="CMS_News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CMS_Menu">
+        <PropertyRef Name="Menu_ID" />
+      </Principal>
+      <Dependent Role="CMS_News">
+        <PropertyRef Name="Menu_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Users_Sys_Roles">
+    <End Type="ProjectModel.Sys_Roles" Role="Sys_Roles" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ProjectModel.Sys_Users" Role="Sys_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Roles">
+        <PropertyRef Name="Role_ID" />
+      </Principal>
+      <Dependent Role="Sys_Users">
+        <PropertyRef Name="Role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_Lan_Test_Case">
+    <End Type="ProjectModel.Test_Case" Role="Test_Case" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ProjectModel.Test_Lan" Role="Test_Lan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test_Case">
+        <PropertyRef Name="Case_ID" />
+      </Principal>
+      <Dependent Role="Test_Lan">
+        <PropertyRef Name="Case_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_Step_Test_Lan">
+    <End Type="ProjectModel.Test_Lan" Role="Test_Lan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ProjectModel.Test_Step" Role="Test_Step" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test_Lan">
+        <PropertyRef Name="Lan_ID" />
+      </Principal>
+      <Dependent Role="Test_Step">
+        <PropertyRef Name="Lan_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

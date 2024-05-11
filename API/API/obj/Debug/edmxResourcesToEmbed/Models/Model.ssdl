@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommentText" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="WorkId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="News_ID" />
+    </Key>
+    <Property Name="News_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="News_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="varchar" MaxLength="50" />
+    <Property Name="Contents" Type="nvarchar(max)" />
+    <Property Name="Details" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateIP" Type="varchar" MaxLength="50" />
+    <Property Name="Trangthai" Type="int" />
+    <Property Name="STT" Type="int" />
+    <Property Name="IPcapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Nguoicapnhat" Type="varchar" MaxLength="50" />
+    <Property Name="Ngaycapnhat" Type="datetime" />
+    <Property Name="Nguoiduyet" Type="varchar" MaxLength="50" />
+    <Property Name="Ngayduyet" Type="datetime" />
+    <Property Name="IPduyet" Type="varchar" MaxLength="50" />
+    <Property Name="IsType" Type="int" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProjectStart" Type="date" />
+    <Property Name="ProjectEnd" Type="date" />
+    <Property Name="ProjectCompleted" Type="date" />
+    <Property Name="ProjectStatus" Type="int" />
+    <Property Name="ProjectDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="StageId" />
+    </Key>
+    <Property Name="StageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StageCode" Type="varchar" MaxLength="50" />
+    <Property Name="StageTarget" Type="nvarchar" MaxLength="1000" />
+    <Property Name="StageStart" Type="date" />
+    <Property Name="StageEnd" Type="date" />
+    <Property Name="StageCompleted" Type="date" />
+    <Property Name="StageStatus" Type="int" />
+    <Property Name="StageDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Token">
+    <Key>
+      <PropertyRef Name="Token_ID" />
+    </Key>
+    <Property Name="Token_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ngay" Type="datetime" />
+    <Property Name="NgayHet" Type="datetime" />
+    <Property Name="FromDivice" Type="varchar" MaxLength="50" />
+    <Property Name="IP" Type="varchar" MaxLength="50" />
+    <Property Name="isDecentlz" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserP">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="500" />
+    <Property Name="PhoneNumber" Type="char" MaxLength="10" />
+    <Property Name="UserAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="KeyEncript" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="Token_ID" Type="varchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="isDecentlz" Type="int" />
+  </EntityType>
+  <EntityType Name="Work">
+    <Key>
+      <PropertyRef Name="WorkId" />
+    </Key>
+    <Property Name="WorkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StageId" Type="int" Nullable="false" />
+    <Property Name="WorkCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkName" Type="nvarchar" MaxLength="500" />
+    <Property Name="WorkStart" Type="date" />
+    <Property Name="WorkEnd" Type="date" />
+    <Property Name="WorkCompleted" Type="date" />
+    <Property Name="WorkStatus" Type="int" />
+    <Property Name="WorkDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="WorkImage" Type="varchar" MaxLength="500" />
+    <Property Name="STT" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkCheck">
+    <Key>
+      <PropertyRef Name="WorkCheckId" />
+    </Key>
+    <Property Name="WorkCheckId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheckResult" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="WorkId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkUser">
+    <Key>
+      <PropertyRef Name="WorkId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="WorkId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="WorkRole" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stage" EntityType="Self.Stage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Token" EntityType="Self.Sys_Token" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserP" EntityType="Self.UserP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Work" EntityType="Self.Work" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkCheck" EntityType="Self.WorkCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkUser" EntityType="Self.WorkUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
