@@ -960,3 +960,6 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Người cập
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ngày cập nhật' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WorkUser', @level2type=N'COLUMN',@level2name=N'ModifiedDate'
 GO
+create or alter proc YourCheck_Get @WorkId int
+as 
+select * from Work where @WorkId=WorkId 

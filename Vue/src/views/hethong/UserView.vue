@@ -989,7 +989,7 @@ onMounted(() => {
           <div class="field">
             <label style="vertical-align: text-bottom" class="col-3 text-left">Admin</label>
             <InputSwitch class="" v-model="user.IsAdmin" />
-            <!-- <label
+            <label
               v-if="!user.IsAdmin"
               style="vertical-align: text-bottom"
               class="col-2 text-center"
@@ -1004,7 +1004,7 @@ onMounted(() => {
               optionLabel="name"
               optionValue="value"
               placeholder="Phân quyền"
-            /> -->
+            />
           </div>
         </div>
         <div class="col-4">
