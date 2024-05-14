@@ -55,8 +55,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus, Version=5.8.8.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPPlus.5.8.8\lib\net45\EPPlus.dll</HintPath>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\soe-plus\API\bin\app.publish\bin\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.42.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.42\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -297,6 +298,7 @@
   <ItemGroup>
     <None Include="Config\Config.json" />
     <Content Include="Content\**" />
+    <Content Include="EPPlus.dll" />
     <Content Include="Error\401.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\**" />
@@ -311,61 +313,6 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="Portals\BodyPart_011741a0-f7e8-4828-a94d-ed63991474cf" />
-    <Content Include="Portals\BodyPart_02261f88-244c-4e89-a6c1-6e3d8e9b8614" />
-    <Content Include="Portals\BodyPart_05b4daf3-bbcb-45aa-900f-5888d6f7670d" />
-    <Content Include="Portals\BodyPart_0e81ac9d-83eb-487f-8901-c1165c43b451" />
-    <Content Include="Portals\BodyPart_19f07d2b-dbda-4620-ad15-3bcbae8389e3" />
-    <Content Include="Portals\BodyPart_27af3ed3-7038-4568-8031-3fc23722390c" />
-    <Content Include="Portals\BodyPart_2c47b40d-837a-4f77-9e8d-03e9d0189a38" />
-    <Content Include="Portals\BodyPart_305b54c0-3347-4339-a21e-51df5a572d35" />
-    <Content Include="Portals\BodyPart_34bd2583-32ab-44e7-9d3b-da64b37cf758" />
-    <Content Include="Portals\BodyPart_359146ee-3337-453d-a2ce-ea10e2a945cb" />
-    <Content Include="Portals\BodyPart_48cd74b8-6162-43da-86c2-b649402e73bb" />
-    <Content Include="Portals\BodyPart_48df5f05-bb24-470f-ad76-6839dbfc3b20" />
-    <Content Include="Portals\BodyPart_4cd071db-edf3-4d10-a322-782ad27b64ae" />
-    <Content Include="Portals\BodyPart_621d0887-ff05-40d7-9b97-bceb601b3ff2" />
-    <Content Include="Portals\BodyPart_62f9cf18-ccf3-45a3-a2b4-34efb49df2a4" />
-    <Content Include="Portals\BodyPart_69c72c03-ba7a-4c18-b33c-9c74b9fb19b0" />
-    <Content Include="Portals\BodyPart_7485564d-23a4-4b17-85db-75c615c55e5c" />
-    <Content Include="Portals\BodyPart_761b435d-c2d1-4b82-94ca-78b5c7ddad77" />
-    <Content Include="Portals\BodyPart_7ba90c5c-688a-41e3-8a4a-d5f70ff50a8f" />
-    <Content Include="Portals\BodyPart_7f5baadf-e94d-456d-a8e3-1a936888cc0f" />
-    <Content Include="Portals\BodyPart_8017cc7f-95f0-4ddc-bdbc-07538be84389" />
-    <Content Include="Portals\BodyPart_8550711e-cd50-42b6-b782-4a05e16e2359" />
-    <Content Include="Portals\BodyPart_9e17a07c-2f25-46cd-bb92-12d3decfaad2" />
-    <Content Include="Portals\BodyPart_9eef1877-f469-413c-b31b-fa8a60fd8f29" />
-    <Content Include="Portals\BodyPart_9f0375e9-24fb-43f4-af4e-e9dd716f2d71" />
-    <Content Include="Portals\BodyPart_ab3f6d88-4b3c-4f57-9b27-70f56f266849" />
-    <Content Include="Portals\BodyPart_b2cb6376-f3ad-45c0-8b14-13388460c227" />
-    <Content Include="Portals\BodyPart_b6ece4d4-6661-462d-8764-8b9a65239d36" />
-    <Content Include="Portals\BodyPart_b81878c9-1301-493f-b13b-6f29d14ff9a2" />
-    <Content Include="Portals\BodyPart_bd0eb50c-9a45-49b8-8a8d-b0318cb0a3a7" />
-    <Content Include="Portals\BodyPart_c10d2e9b-b07e-44ce-89b9-b7169c1f88c4" />
-    <Content Include="Portals\BodyPart_cba9e3d6-94e8-49a4-8c0a-cc03262ca287" />
-    <Content Include="Portals\BodyPart_ce4ee5a6-0668-4b12-92d5-2e616a833a43" />
-    <Content Include="Portals\BodyPart_d2974c75-e7c6-48b1-b7fd-c85d1c43ea33" />
-    <Content Include="Portals\BodyPart_dd3bf007-67f2-484a-8b10-2bd4bfc1588d" />
-    <Content Include="Portals\BodyPart_e1b8e5e5-48d2-4a58-b41b-a285cf3649d9" />
-    <Content Include="Portals\BodyPart_e4715ed5-6ac1-40cb-8035-fcf4fc2effc7" />
-    <Content Include="Portals\BodyPart_e988ed2a-038d-4be3-9257-a5149ed86287" />
-    <Content Include="Portals\BodyPart_ec6b20b5-c0e6-4a5d-ae5c-466354fb0365" />
-    <Content Include="Portals\BodyPart_f875095a-5f25-4633-99f6-1cea2faeb3ef" />
-    <Content Include="Portals\BodyPart_ff878560-c533-4cc8-851b-ab28fbd9e958" />
-    <Content Include="Portals\connectString.json" />
-    <Content Include="Portals\Export\administrator.xlsx" />
-    <Content Include="Portals\Export\DANH SACH MUC DO0987729288.xlsx" />
-    <Content Include="Portals\Export\DANH SACH NGON NGUadministrator.xlsx" />
-    <Content Include="Portals\Export\DANH SACH NGUOI DUNGadministrator.xlsx" />
-    <Content Include="Portals\Export\DANH SACH NHOM NGUOI DUNGadministrator.xlsx" />
-    <Content Include="Portals\Export\DANH SACH TABLES0987729288.xlsx" />
-    <Content Include="Portals\Export\DANH SACH UU TIEN0987729288.xlsx" />
-    <Content Include="Portals\Export\LICH SU TRUY CAPadministrator.xlsx" />
-    <Content Include="Portals\Export\LOGSadministrator.xlsx" />
-    <Content Include="Portals\Export\Moduleadministrator.xlsx" />
-    <Content Include="Portals\Export\SQLLOGS0987729288.xlsx" />
-    <Content Include="Portals\Export\SQLLOGSadministrator.xlsx" />
-    <Content Include="Portals\Export\TABLE0987729288.xlsx" />
     <Content Include="Portals\Folder\8\DoanTienDat-LapTrinhVien.Net.pdf" />
     <Content Include="Portals\Folder\8\Giải pháp Internet FTTH của CMC.pdf" />
     <Content Include="Portals\Folder\8\Hua-Van-Duy.Net-220222.221509.pdf" />
@@ -503,7 +450,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Portals\Export\" />
     <Folder Include="Portals\Module\" />
+    <Folder Include="Portals\Work\" />
     <Folder Include="Views\WorkUser\" />
   </ItemGroup>
   <ItemGroup>

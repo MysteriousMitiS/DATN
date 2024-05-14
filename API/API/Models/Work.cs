@@ -14,6 +14,12 @@ namespace API.Models
     
     public partial class Work
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Work()
+        {
+            this.WorkUsers = new HashSet<WorkUser>();
+        }
+    
         public int WorkId { get; set; }
         public int StageId { get; set; }
         public string WorkCode { get; set; }
@@ -29,5 +35,9 @@ namespace API.Models
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public string WorkImage { get; set; }
         public Nullable<int> STT { get; set; }
+    
+        public virtual Stage Stage { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkUser> WorkUsers { get; set; }
     }
 }

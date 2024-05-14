@@ -1,7 +1,6 @@
 ﻿using API.Models;
 using Helper;
 using Newtonsoft.Json;
-using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,7 +10,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Sockets;
-using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -243,30 +241,11 @@ namespace Controllers
                         }
                         var md = provider.FormData.GetValues("user").SingleOrDefault();
                         fduser = provider.FormData.GetValues("user").SingleOrDefault();
-                        string noidung = provider.FormData.GetValues("noidung") != null ? provider.FormData.GetValues("noidung").SingleOrDefault() : "";
                         UserP user = JsonConvert.DeserializeObject<UserP>(fduser);
                         var um = db.UserPs.AsNoTracking().FirstOrDefault(x => x.UserName == user.UserName);
                         string depass = Codec.EncryptString(user.Password, helper.passkey);
                         if (um?.Password != user.Password)
                             user.Password = depass;
-                        #region nội dung thay đổi
-                        if (noidung == "")
-                        {
-                            if (um.Name != user.Name)
-                            {
-                                noidung += "Chỉnh sửa tên tài khoản\n";
-                            }
-                            if (provider.FileData.Count > 0)
-                            {
-                                noidung += "Chỉnh sửa ảnh tài khoản\n";
-                            }
-                         
-                            if (um?.Password != depass)
-                            {
-                                noidung += "Chỉnh sửa mật khẩu\n";
-                            }
-                        }
-                        #endregion
                         FileInfo fileInfo = null;
                         MultipartFileData ffileData = null;
                         string newFileName = "";

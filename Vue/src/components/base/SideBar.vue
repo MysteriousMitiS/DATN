@@ -1,83 +1,81 @@
 <script setup>
 //Import
-import { inject, onMounted, ref } from "vue";
+import { inject, onMounted, ref } from 'vue'
 //Khai báo biến
-const basedomainURL = baseURL;
-const store = inject("store");
-const swal = inject("$swal");
-const axios = inject("axios"); // inject axios
-const menu = ref([]);
+const basedomainURL = baseURL
+const store = inject('store')
+const swal = inject('$swal')
+const axios = inject('axios') // inject axios
+const menu = ref([])
 const loadMenu = () => {
   if (store.state.user.IsQuyen > 3) {
     menu.value = [
       {
-        header: "DATN-001",
-        hiddenOnCollapse: true,
+        header: 'Quản trị công việc',
+        hiddenOnCollapse: true
       },
       {
-        href: "/",
-        title: "Trang chủ",
-        icon: "pi pi-home",
+        href: '/',
+        title: 'Trang chủ',
+        icon: 'pi pi-home'
       },
       {
-        href: "/project",
-        title: "Tất cả dự án",
-        icon: "pi pi-bars",
+        href: '/project',
+        title: 'Tất cả dự án',
+        icon: 'pi pi-bars'
       },
       {
-        href: "/yourwork",
-        title: "Công việc",
-        icon: "pi pi-folder",
-      },
-        {
-        href: "/news",
-        title: "Sự kiện - Thông báo",
-        icon: "pi pi-instagram",
+        href: '/yourwork',
+        title: 'Công việc',
+        icon: 'pi pi-folder'
       },
       {
-        href: "/user",
-        title: "Nhân sự",
-        icon: "pi pi-users",
+        href: '/news',
+        title: 'Sự kiện - Thông báo',
+        icon: 'pi pi-instagram'
       },
-    
-    ];
-  }
-  else{
+      {
+        href: '/user',
+        title: 'Nhân sự',
+        icon: 'pi pi-users'
+      }
+    ]
+  } else {
     menu.value = [
       {
-        header: "DATN-001",
-        hiddenOnCollapse: true,
+        header: 'Quản trị công việc',
+        hiddenOnCollapse: true
       },
       {
-        href: "/",
-        title: "Trang chủ",
-        icon: "pi pi-home",
+        href: '/',
+        title: 'Trang chủ',
+        icon: 'pi pi-home'
       },
       {
-        href: "/yourwork",
-        title: "Công việc",
-        icon: "pi pi-folder",
+        href: '/yourwork',
+        title: 'Công việc',
+        icon: 'pi pi-folder'
       },
       {
-        href: "/user",
-        title: "Thông tin của tôi",
-        icon: "pi pi-users",
-      },
-    ];
+        href: '/user',
+        title: 'Thông tin của tôi',
+        icon: 'pi pi-users'
+      }
+    ]
   }
-};
+}
 
-const appconfig = ref({ version: "1.0" });
+const appconfig = ref({ version: '1.0' })
 //Vue App
 onMounted(() => {
-  loadMenu();
+  loadMenu()
   return {
-    menu,
-  };
-});
+    menu
+  }
+})
 </script>
 <template>
-  <sidebar-menu :menu="menu" class="vsm_white-theme w-2"  v-if="store.state.user.IsQuyen>3">
+  <sidebar-menu :menu="menu" class="vsm_white-theme w-2" v-if="store.state.user.IsQuyen > 3">
     <!-- <template v-slot:header
       ><div class="text-center p-2">
         <Avatar

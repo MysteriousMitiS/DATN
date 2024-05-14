@@ -14,6 +14,13 @@ namespace API.Models
     
     public partial class WorkUser
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public WorkUser()
+        {
+            this.Comments = new HashSet<Comment>();
+            this.WorkChecks = new HashSet<WorkCheck>();
+        }
+    
         public int WorkId { get; set; }
         public int UserId { get; set; }
         public Nullable<int> WorkRole { get; set; }
@@ -21,5 +28,12 @@ namespace API.Models
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual UserP UserP { get; set; }
+        public virtual Work Work { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkCheck> WorkChecks { get; set; }
     }
 }

@@ -162,6 +162,108 @@
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="100" />
     <Property Name="ModifiedDate" Type="date" />
   </EntityType>
+  <Association Name="fk_Comment_Check">
+    <End Role="WorkUser" Type="Self.WorkUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_New_Userp">
+    <End Role="UserP" Type="Self.UserP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserP">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Project_Stage">
+    <End Role="Project" Type="Self.Project" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Stage" Type="Self.Stage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Stage">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Stage_Work">
+    <End Role="Stage" Type="Self.Stage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Work" Type="Self.Work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stage">
+        <PropertyRef Name="StageId" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="StageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserP_WorkUser">
+    <End Role="UserP" Type="Self.UserP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkUser" Type="Self.WorkUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserP">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="WorkUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Work_WorkUser">
+    <End Role="Work" Type="Self.Work" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkUser" Type="Self.WorkUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="WorkId" />
+      </Principal>
+      <Dependent Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_WorkUser_Check">
+    <End Role="WorkUser" Type="Self.WorkUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkCheck" Type="Self.WorkCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="WorkCheck">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
@@ -173,5 +275,33 @@
     <EntitySet Name="Work" EntityType="Self.Work" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WorkCheck" EntityType="Self.WorkCheck" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WorkUser" EntityType="Self.WorkUser" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_Comment_Check" Association="Self.fk_Comment_Check">
+      <End Role="WorkUser" EntitySet="WorkUser" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_New_Userp" Association="Self.FK_New_Userp">
+      <End Role="UserP" EntitySet="UserP" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Project_Stage" Association="Self.fk_Project_Stage">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="Stage" EntitySet="Stage" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Stage_Work" Association="Self.fk_Stage_Work">
+      <End Role="Stage" EntitySet="Stage" />
+      <End Role="Work" EntitySet="Work" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserP_WorkUser" Association="Self.fk_UserP_WorkUser">
+      <End Role="UserP" EntitySet="UserP" />
+      <End Role="WorkUser" EntitySet="WorkUser" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Work_WorkUser" Association="Self.fk_Work_WorkUser">
+      <End Role="Work" EntitySet="Work" />
+      <End Role="WorkUser" EntitySet="WorkUser" />
+    </AssociationSet>
+    <AssociationSet Name="fk_WorkUser_Check" Association="Self.fk_WorkUser_Check">
+      <End Role="WorkUser" EntitySet="WorkUser" />
+      <End Role="WorkCheck" EntitySet="WorkCheck" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -1,106 +1,97 @@
 <script setup>
 //Import
-import { useToast } from "vue-toastification";
-import { inject, onMounted, ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { inject, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useToast } from 'vue-toastification'
 //Khai báo
-const router = useRouter();
-const axios = inject("axios");
-const swal = inject("$swal");
+const router = useRouter()
+const axios = inject('axios')
+const swal = inject('$swal')
 //Khai báo biến
-const store = inject("store");
-const storetheme = inject("storetheme");
+const store = inject('store')
+const storetheme = inject('storetheme')
 
 const setTheme = (name) => {
-  storetheme.value = name;
-  localStorage.setItem("storetheme", name);
-  visibleSidebarRight.value = false;
-};
-const basedomainURL = baseURL;
+  storetheme.value = name
+  localStorage.setItem('storetheme', name)
+  visibleSidebarRight.value = false
+}
+const basedomainURL = baseURL
 
-const menu = ref();
-const toast = useToast();
-const visibleSidebarRight = ref(false);
+const menu = ref()
+const toast = useToast()
+const visibleSidebarRight = ref(false)
 const items = ref([
-  { label: "Công việc của bạn", icon: "pi pi-fw pi-folder", to: "/yourwork" },
-  { label: "Cài đặt", icon: "pi pi-fw pi-cog", to: "/user" },
+  { label: 'Công việc của bạn', icon: 'pi pi-fw pi-folder', to: '/yourwork' },
+  { label: 'Cài đặt', icon: 'pi pi-fw pi-cog', to: '/user' },
   {
-    label: "Đăng xuất",
-    icon: "pi pi-fw pi-power-off",
+    label: 'Đăng xuất',
+    icon: 'pi pi-fw pi-power-off',
     command: (event) => {
-      logout();
-    },
-  },
-]);
+      logout()
+    }
+  }
+])
 
 //
 const logout = () => {
   swal
     .fire({
-      title: "Thông báo",
-      text: "Bạn có muốn đăng xuất khỏi tài khoản này không!",
-      icon: "warning",
+      title: 'Thông báo',
+      text: 'Bạn có muốn đăng xuất khỏi tài khoản này không!',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Có",
-      cancelButtonText: "Không",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Có',
+      cancelButtonText: 'Không'
     })
     .then((result) => {
       if (result.isConfirmed) {
-            router.push({
-          path: "/",
-        });
-       
-        store.commit("gologout");
+        router.push({
+          path: '/'
+        })
 
-    
+        store.commit('gologout')
       }
-    });
-};
+    })
+}
 const toggle = (event) => {
   //storetheme.value="bootstrap4-dark-blue";
-  menu.value.toggle(event);
-};
+  menu.value.toggle(event)
+}
 
 //Vue App
 onMounted(() => {
   return {
     menu,
-    items,
-  };
-});
+    items
+  }
+})
 </script>
 <template>
   <div class="flex flex-row shadow-3 header-bar">
     <Toolbar class="w-full py-0 pl-0">
       <template #start>
-        <a href="/" style=" text-decoration: none;">
-        <div class="flex flex-row flex-grow-1 headerbar align-items-center">
-          <div class="ml-2 mr-2">
-            <img src="../../assets/image/cms.png" height="40" />
+        <a href="/" style="text-decoration: none">
+          <div class="flex flex-row flex-grow-1 headerbar align-items-center">
+            <div class="ml-2 mr-2">
+              <img src="../../assets/image/cms.png" height="40" />
+            </div>
+            <h2 style="font-size: 1.1rem; color: #005a9e; font-weight: bold; text-decoration: none">
+              Quản trị công việc
+            </h2>
           </div>
-          <h2  style="font-size: 1.1rem; color: #005a9e; font-weight: bold; text-decoration: none;">
-            QUẢN LÝ DỰ ÁN
-          </h2>
-        </div>
         </a>
       </template>
       <template #end>
-        <div
-          class="
-            flex flex-none
-            align-items-center
-            justify-content-center
-            btn-togglang
-          "
-        >
-          <i
+        <div class="flex flex-none align-items-center justify-content-center btn-togglang">
+          <!-- <i
             v-ripple
             class="pi pi-bell mr-4 p-text-secondary"
             style="font-size: 1.5rem"
             v-badge="2"
-          ></i>
+          ></i> -->
           <Button
             type="button"
             class="shadow-none p-button-text p-1 p-ripple"
@@ -115,9 +106,7 @@ onMounted(() => {
                   ? basedomainURL + store.getters.user.Avatar
                   : '/src/assets/image/noimg.jpg'
               "
-              v-bind:label="
-                store.getters.user.Avatar ? '' : store.getters.user.Name
-              "
+              v-bind:label="store.getters.user.Avatar ? '' : store.getters.user.Name"
               style="background-color: #2196f3; color: #ffffff"
               shape="circle"
             />
@@ -136,11 +125,7 @@ onMounted(() => {
   >
     <h2 class="align-items-center justify-content-center">
       Cấu hình Theme
-      <Button
-        icon="pi pi-palette"
-        @click="setTheme('saga-blue')"
-        class="p-button-rounded"
-      />
+      <Button icon="pi pi-palette" @click="setTheme('saga-blue')" class="p-button-rounded" />
     </h2>
 
     <div v-for="(value, name) in skin" :key="name">

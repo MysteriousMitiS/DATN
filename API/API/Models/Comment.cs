@@ -20,5 +20,7 @@ namespace API.Models
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public int WorkId { get; set; }
         public int UserId { get; set; }
+    
+        public virtual WorkUser WorkUser { get; set; }
     }
 }

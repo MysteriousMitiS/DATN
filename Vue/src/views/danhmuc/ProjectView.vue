@@ -1,871 +1,855 @@
 <script setup>
-import { ref, inject, onMounted, watch } from "vue";
-import { useToast } from "vue-toastification";
-import { required } from "@vuelidate/validators";
-import { useVuelidate } from "@vuelidate/core";
-import moment from "moment";
-import { useRouter, useRoute } from "vue-router";
+import { useVuelidate } from '@vuelidate/core'
+import { required } from '@vuelidate/validators'
+import moment from 'moment'
+import { inject, onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useToast } from 'vue-toastification'
 //Khai báo
-const router = useRouter();
-const route = useRoute();
-const axios = inject("axios");
-const store = inject("store");
-const swal = inject("$swal");
-const toast = useToast();
+const router = useRouter()
+const route = useRoute()
+const axios = inject('axios')
+const store = inject('store')
+const swal = inject('$swal')
+const toast = useToast()
 const Project = ref({
-  ProjectCode: "",
-  ProjectName: "",
+  ProjectCode: '',
+  ProjectName: '',
   ProjectStatus: 0,
   ProjectStart: null,
   ProjectEnd: null,
   ProjectCompleted: null,
-  ProjectDescription: "",
-});
+  ProjectDescription: ''
+})
 const Stage = ref({
-  StageCode: "",
-  StageTarget: "",
+  StageCode: '',
+  StageTarget: '',
   StageStatus: 0,
   StageStart: null,
   StageEnd: null,
   StageCompleted: null,
-  StageDescription: "",
-});
+  StageDescription: ''
+})
 
 const rules = {
   ProjectCode: {
     required,
     $errors: [
       {
-        $property: "ProjectCode",
-        $validator: "required",
-        $message: "Mã dự án không được để trống!",
-      },
-    ],
+        $property: 'ProjectCode',
+        $validator: 'required',
+        $message: 'Mã dự án không được để trống!'
+      }
+    ]
   },
   ProjectName: {
     required,
     $errors: [
       {
-        $property: "ProjectName",
-        $validator: "required",
-        $message: "Tên dự án không được để trống!",
-      },
-    ],
-  },
-};
-const v$ = useVuelidate(rules, Project);
+        $property: 'ProjectName',
+        $validator: 'required',
+        $message: 'Tên dự án không được để trống!'
+      }
+    ]
+  }
+}
+const v$ = useVuelidate(rules, Project)
 const config = {
-  headers: { Authorization: `Bearer ${store.getters.token}` },
-};
-const projects = ref();
+  headers: { Authorization: `Bearer ${store.getters.token}` }
+}
+const projects = ref()
 
-const isFirst = ref(true);
-const basedomainURL = baseURL;
+const isFirst = ref(true)
+const basedomainURL = baseURL
 const options = ref({
-  SearchText: "",
-  searchTextStage: "",
+  SearchText: '',
+  searchTextStage: '',
   loading: true,
   PageSize: 10,
-  loading: true,
-});
+  loading: true
+})
 const pStatus = ref([
-  { name: "Chưa hoàn thành", code: 0 },
-  { name: "Đã hoàn thành", code: 1 },
-  { name: "Không hoàn thành", code: -1 },
-]);
-const checkImage = ref(false);
-const expandedRows = ref([]);
-const displayBasic = ref(false);
-const displayBasic1 = ref(false);
-const headerDialog = ref();
-const headerDialog1 = ref();
-const checkLang = ref(true);
-const checkPagenator = ref(false);
-const showThumbnails = ref(false);
-const images = ref([]);
-const submitted = ref(false);
-const isSaveProject = ref(false);
-const isSaveStage = ref(false);
-const selectedProjects = ref();
-const selectedStage = ref();
-const checkSlideShowImg = ref(false);
-const isShowBtnAdd = ref(true);
-const isDeleteListSlide = ref(false);
-const isDeleteListImg = ref(false);
-const checkTrangthai = ref(false);
+  { name: 'Chưa hoàn thành', code: 0 },
+  { name: 'Đã hoàn thành', code: 1 },
+  { name: 'Không hoàn thành', code: -1 }
+])
+const checkImage = ref(false)
+const expandedRows = ref([])
+const displayBasic = ref(false)
+const displayBasic1 = ref(false)
+const headerDialog = ref()
+const headerDialog1 = ref()
+const checkLang = ref(true)
+const checkPagenator = ref(false)
+const showThumbnails = ref(false)
+const images = ref([])
+const submitted = ref(false)
+const isSaveProject = ref(false)
+const isSaveStage = ref(false)
+const selectedProjects = ref()
+const selectedStage = ref()
+const checkSlideShowImg = ref(false)
+const isShowBtnAdd = ref(true)
+const isDeleteListSlide = ref(false)
+const isDeleteListImg = ref(false)
+const checkTrangthai = ref(false)
 //Method
 const showWork = (data) => {
-  store.commit("setIdStage", data.StageId);
-  store.commit("setCheckStage", true);
+  store.commit('setIdStage', data.StageId)
+  store.commit('setCheckStage', true)
   router.push({
-    name: "work",
-  });
-};
+    name: 'work'
+  })
+}
 //thêm ảnh
 const saveStage = () => {
   if (!isSaveStage.value) {
     axios
-      .post(baseURL + "/api/Stages/AddStage", Stage.value, config)
+      .post(baseURL + '/api/Stages/AddStage', Stage.value, config)
       .then((response) => {
-        if (response.data.err != "1") {
-          swal.close();
-          toast.success("Thêm giai đoạn thành công!");
-          loadProjectData(true);
-          closeDialog1();
+        if (response.data.err != '1') {
+          swal.close()
+          toast.success('Thêm giai đoạn thành công!')
+          loadProjectData(true)
+          closeDialog1()
         } else {
           swal.fire({
-            title: "Error!",
+            title: 'Error!',
             text: response.data.ms,
-            icon: "error",
-            confirmButtonText: "OK",
-          });
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
         }
       })
       .catch((error) => {
-        swal.close();
+        swal.close()
         swal.fire({
-          title: "Error!",
-          text: "Có lỗi xảy ra, vui lòng kiểm tra lại!",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      });
+          title: 'Error!',
+          text: 'Có lỗi xảy ra, vui lòng kiểm tra lại!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      })
   } else {
-    if (typeof Stage.value.StageStart == "string") {
-      var startDay = Stage.value.StageStart.split("/");
-      Stage.value.StageStart = new Date(
-        startDay[2] + "/" + startDay[1] + "/" + startDay[0]
-      );
+    if (typeof Stage.value.StageStart == 'string') {
+      var startDay = Stage.value.StageStart.split('/')
+      Stage.value.StageStart = new Date(startDay[2] + '/' + startDay[1] + '/' + startDay[0])
     }
-    if (typeof Stage.value.StageStart == "string") {
-      var startDay = Stage.value.StageStart.split("/");
-      Stage.value.StageStart = new Date(
-        startDay[2] + "/" + startDay[1] + "/" + startDay[0]
-      );
+    if (typeof Stage.value.StageStart == 'string') {
+      var startDay = Stage.value.StageStart.split('/')
+      Stage.value.StageStart = new Date(startDay[2] + '/' + startDay[1] + '/' + startDay[0])
     }
-    if (typeof Stage.value.StageEnd == "string") {
-      var startDay = Stage.value.StageEnd.split("/");
-      Stage.value.StageEnd = new Date(
-        startDay[2] + "/" + startDay[1] + "/" + startDay[0]
-      );
+    if (typeof Stage.value.StageEnd == 'string') {
+      var startDay = Stage.value.StageEnd.split('/')
+      Stage.value.StageEnd = new Date(startDay[2] + '/' + startDay[1] + '/' + startDay[0])
     }
-    if (typeof Stage.value.StageCompleted == "string") {
-      var startDay = Stage.value.StageCompleted.split("/");
-      Stage.value.StageCompleted = new Date(
-        startDay[2] + "/" + startDay[1] + "/" + startDay[0]
-      );
+    if (typeof Stage.value.StageCompleted == 'string') {
+      var startDay = Stage.value.StageCompleted.split('/')
+      Stage.value.StageCompleted = new Date(startDay[2] + '/' + startDay[1] + '/' + startDay[0])
     }
 
     axios
-      .put(baseURL + "/api/Stages/UpdateStage", Stage.value, config)
+      .put(baseURL + '/api/Stages/UpdateStage', Stage.value, config)
       .then((response) => {
-        if (response.data.err != "1") {
-          swal.close();
-          toast.success("Sửa giai đoạn thành công!");
+        if (response.data.err != '1') {
+          swal.close()
+          toast.success('Sửa giai đoạn thành công!')
 
-          loadProjectData(true);
-          closeDialog1();
+          loadProjectData(true)
+          closeDialog1()
         } else {
           swal.fire({
-            title: "Error!",
+            title: 'Error!',
             text: response.data.ms,
-            icon: "error",
-            confirmButtonText: "OK",
-          });
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
         }
       })
       .catch((error) => {
-        swal.close();
+        swal.close()
         swal.fire({
-          title: "Error!",
-          text: "Có lỗi xảy ra, vui lòng kiểm tra lại!",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      });
+          title: 'Error!',
+          text: 'Có lỗi xảy ra, vui lòng kiểm tra lại!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      })
   }
-};
+}
 // Tìm ảnh
 const searchStage = (value) => {
-  (async () => {
+  ;(async () => {
     const res = await axios
       .post(
-        baseURL + "/api/Proc/CallProc",
+        baseURL + '/api/Proc/CallProc',
         {
-          proc: "Project_List",
-          par: [{ par: "m_SearchText", va: options.value.SearchText }],
+          proc: 'Project_List',
+          par: [{ par: 'm_SearchText', va: options.value.SearchText }]
         },
         config
       )
       .then((response) => {
-        let data = JSON.parse(response.data.data)[0];
-        if (isFirst.value) isFirst.value = false;
-        options.value.loading = false;
-        return data;
+        let data = JSON.parse(response.data.data)[0]
+        if (isFirst.value) isFirst.value = false
+        options.value.loading = false
+        return data
       })
       .catch((error) => {
-        toast.error("Tải dữ liệu không thành công!");
-        options.value.loading = false;
+        toast.error('Tải dữ liệu không thành công!')
+        options.value.loading = false
 
         if (error && error.status === 401) {
           swal.fire({
-            title: "Error!",
-            text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-            icon: "error",
-            confirmButtonText: "OK",
-          });
-          store.commit("gologout");
+            title: 'Error!',
+            text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
+          store.commit('gologout')
         }
-      });
+      })
     const res1 = await axios
       .post(
-        baseURL + "/api/Proc/CallProc",
+        baseURL + '/api/Proc/CallProc',
         {
-          proc: "Stage_ListWithId",
+          proc: 'Stage_ListWithId',
           par: [
-            { par: "m_SearchText", va: options.value.searchTextStage },
-            { par: "Id", va: value.ProjectId },
-          ],
+            { par: 'm_SearchText', va: options.value.searchTextStage },
+            { par: 'Id', va: value.ProjectId }
+          ]
         },
         config
       )
       .then((response) => {
-        let data = JSON.parse(response.data.data)[0];
-        if (isFirst.value) isFirst.value = false;
-        options.value.loading = false;
-        return data;
+        let data = JSON.parse(response.data.data)[0]
+        if (isFirst.value) isFirst.value = false
+        options.value.loading = false
+        return data
       })
       .catch((error) => {
-        toast.error("Tải dữ liệu không thành công!");
-        options.value.loading = false;
+        toast.error('Tải dữ liệu không thành công!')
+        options.value.loading = false
 
         if (error && error.status === 401) {
           swal.fire({
-            title: "Error!",
-            text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-            icon: "error",
-            confirmButtonText: "OK",
-          });
-          store.commit("gologout");
+            title: 'Error!',
+            text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
+          store.commit('gologout')
         }
-      });
-    renderTree(res, res1);
-    options.value.loading = false;
-  })();
-};
+      })
+    renderTree(res, res1)
+    options.value.loading = false
+  })()
+}
 //Xóa bản ghi
 const deleleProject = (project2) => {
   swal
     .fire({
-      title: "Thông báo",
-      text: "Bạn có muốn xoá dự án này không!",
-      icon: "warning",
+      title: 'Thông báo',
+      text: 'Bạn có muốn xoá dự án này không!',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Có",
-      cancelButtonText: "Không",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Có',
+      cancelButtonText: 'Không'
     })
     .then((result) => {
       if (result.isConfirmed) {
         swal.fire({
           width: 110,
           didOpen: () => {
-            swal.showLoading();
-          },
-        });
+            swal.showLoading()
+          }
+        })
 
         axios
-          .delete(baseURL + "/api/Projects/DeleteProject", {
+          .delete(baseURL + '/api/Projects/DeleteProject', {
             headers: { Authorization: `Bearer ${store.getters.token}` },
-            data: project2 != null ? [project2.ProjectId] : 1,
+            data: project2 != null ? [project2.ProjectId] : 1
           })
           .then((response) => {
-            swal.close();
-            if (response.data.err != "1") {
-              swal.close();
-              toast.success("Xoá dự án thành công!");
-              loadProjectData(true);
+            swal.close()
+            if (response.data.err != '1') {
+              swal.close()
+              toast.success('Xoá dự án thành công!')
+              loadProjectData(true)
             } else {
               swal.fire({
-                title: "Error!",
+                title: 'Error!',
                 text: response.data.ms,
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
           })
           .catch((error) => {
-            swal.close();
+            swal.close()
             if (error.status === 401) {
               swal.fire({
-                title: "Error!",
-                text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                title: 'Error!',
+                text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
-          });
+          })
       }
-    });
-};
+    })
+}
 const deleteStage = (value) => {
   swal
     .fire({
-      title: "Thông báo",
-      text: "Bạn có muốn xoá giai đoạn này không!",
-      icon: "warning",
+      title: 'Thông báo',
+      text: 'Bạn có muốn xoá giai đoạn này không!',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Có",
-      cancelButtonText: "Không",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Có',
+      cancelButtonText: 'Không'
     })
     .then((result) => {
       if (result.isConfirmed) {
         swal.fire({
           width: 110,
           didOpen: () => {
-            swal.showLoading();
-          },
-        });
+            swal.showLoading()
+          }
+        })
 
         axios
-          .delete(baseURL + "/api/Stages/DeleteStage", {
+          .delete(baseURL + '/api/Stages/DeleteStage', {
             headers: { Authorization: `Bearer ${store.getters.token}` },
-            data: value != null ? [value.StageId] : 1,
+            data: value != null ? [value.StageId] : 1
           })
           .then((response) => {
-            swal.close();
-            if (response.data.err != "1") {
-              swal.close();
-              toast.success("Xoá giai đoạn thành công!");
-              loadProjectData(true);
+            swal.close()
+            if (response.data.err != '1') {
+              swal.close()
+              toast.success('Xoá giai đoạn thành công!')
+              loadProjectData(true)
             } else {
               swal.fire({
-                title: "Error!",
+                title: 'Error!',
                 text: response.data.ms,
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
           })
           .catch((error) => {
-            swal.close();
+            swal.close()
             if (error.status === 401) {
               swal.fire({
-                title: "Error!",
-                text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                title: 'Error!',
+                text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
-          });
+          })
       }
-    });
-};
+    })
+}
 
 //Xóa nhiều
 const deleteListProject = () => {
-  let listId = new Array(selectedProjects.length);
+  let listId = new Array(selectedProjects.value.length)
 
   swal
     .fire({
-      title: "Thông báo",
-      text: "Bạn có muốn xoá danh sách dự án này không!",
-      icon: "warning",
+      title: 'Thông báo',
+      text: 'Bạn có muốn xoá danh sách dự án này không!',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Có",
-      cancelButtonText: "Không",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Có',
+      cancelButtonText: 'Không'
     })
     .then((result) => {
       if (result.isConfirmed) {
         swal.fire({
           width: 110,
           didOpen: () => {
-            swal.showLoading();
-          },
-        });
+            swal.showLoading()
+          }
+        })
         selectedProjects.value.forEach((item) => {
-          listId.push(item.ProjectId);
-        });
+          listId.push(item.ProjectId)
+        })
         axios
-          .delete(baseURL + "/api/Projects/DeleteProject", {
+          .delete(baseURL + '/api/Projects/DeleteProject', {
             headers: { Authorization: `Bearer ${store.getters.token}` },
-            data: listId != null ? listId : 1,
+            data: listId != null ? listId : 1
           })
           .then((response) => {
-            swal.close();
-            if (response.data.err != "1") {
-              swal.close();
-              toast.success("Xoá danh sách dự án thành công!");
-              isDeleteListSlide.value = false;
-              loadProjectData(true);
+            swal.close()
+            if (response.data.err != '1') {
+              swal.close()
+              toast.success('Xoá danh sách dự án thành công!')
+              isDeleteListSlide.value = false
+              loadProjectData(true)
             } else {
               swal.fire({
-                title: "Error!",
+                title: 'Error!',
                 text: response.data.ms,
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
           })
           .catch((error) => {
-            swal.close();
+            swal.close()
             if (error.status === 401) {
               swal.fire({
-                title: "Error!",
-                text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                title: 'Error!',
+                text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
-          });
+          })
       }
-    });
-};
+    })
+}
 const deleteListStage = () => {
-  let listId = new Array(selectedStage.length);
+  let listId = new Array(selectedStage.value.length)
 
   swal
     .fire({
-      title: "Thông báo",
-      text: "Bạn có muốn xoá danh sách giai đoạn này không!",
-      icon: "warning",
+      title: 'Thông báo',
+      text: 'Bạn có muốn xoá danh sách giai đoạn này không!',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Có",
-      cancelButtonText: "Không",
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Có',
+      cancelButtonText: 'Không'
     })
     .then((result) => {
       if (result.isConfirmed) {
         swal.fire({
           width: 110,
           didOpen: () => {
-            swal.showLoading();
-          },
-        });
+            swal.showLoading()
+          }
+        })
         selectedStage.value.forEach((item) => {
-          listId.push(item.StageId);
-        });
+          listId.push(item.StageId)
+        })
         axios
-          .delete(baseURL + "/api/Stages/DeleteStage", {
+          .delete(baseURL + '/api/Stages/DeleteStage', {
             headers: { Authorization: `Bearer ${store.getters.token}` },
-            data: listId != null ? listId : 1,
+            data: listId != null ? listId : 1
           })
           .then((response) => {
-            swal.close();
-            if (response.data.err != "1") {
-              swal.close();
-              toast.success("Xoá danh sách giai đoạn thành công!");
-              isDeleteListImg.value = false;
-              loadProjectData(true);
+            swal.close()
+            if (response.data.err != '1') {
+              swal.close()
+              toast.success('Xoá danh sách giai đoạn thành công!')
+              isDeleteListImg.value = false
+              loadProjectData(true)
             } else {
               swal.fire({
-                title: "Error!",
+                title: 'Error!',
                 text: response.data.ms,
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
           })
           .catch((error) => {
-            swal.close();
+            swal.close()
             if (error.status === 401) {
               swal.fire({
-                title: "Error!",
-                text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-                icon: "error",
-                confirmButtonText: "OK",
-              });
+                title: 'Error!',
+                text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              })
             }
-          });
+          })
       }
-    });
-};
+    })
+}
 watch(selectedProjects, () => {
   if (selectedProjects.value.length > 0) {
-    isDeleteListSlide.value = true;
+    isDeleteListSlide.value = true
   } else {
-    isDeleteListSlide.value = false;
+    isDeleteListSlide.value = false
   }
-});
+})
 watch(selectedStage, () => {
   if (selectedStage.value.length > 0) {
-    isDeleteListImg.value = true;
+    isDeleteListImg.value = true
   } else {
-    isDeleteListImg.value = false;
+    isDeleteListImg.value = false
   }
-});
+})
 
 watch(projects, () => {
   if (projects.value.length > options.value.PageSize) {
-    checkPagenator.value = true;
+    checkPagenator.value = true
   } else {
-    checkPagenator.value = false;
+    checkPagenator.value = false
   }
-});
+})
 watch(
   () => store.getters.langid,
   function () {
-    loadProjectData(true);
+    loadProjectData(true)
   }
-);
+)
 
 //Xuất excel
-const menuButs = ref();
+const menuButs = ref()
 const itemButs = ref([
   {
-    label: "Xuất Excel",
-    icon: "pi pi-file-excel",
+    label: 'Xuất Excel',
+    icon: 'pi pi-file-excel',
     command: (event) => {
-      exportData("ExportExcel");
-    },
-  },
-]);
+      exportData('ExportExcel')
+    }
+  }
+])
 const toggleExport = (event) => {
-  menuButs.value.toggle(event);
-};
+  menuButs.value.toggle(event)
+}
 const exportData = (method) => {
   swal.fire({
     width: 110,
     didOpen: () => {
-      swal.showLoading();
-    },
-  });
+      swal.showLoading()
+    }
+  })
   axios
     .post(
-      baseURL + "/api/Excel/ExportExcel",
+      baseURL + '/api/Excel/ExportExcel',
       {
-        excelname: "DANH SÁCH DỰ ÁN",
-        proc: "Project_ListExport",
-        par: [{ par: "Search", va: options.value.SearchText }],
+        excelname: 'DANH SÁCH DỰ ÁN',
+        proc: 'Project_ListExport',
+        par: [{ par: 'Search', va: options.value.SearchText }]
       },
       config
     )
     .then((response) => {
-      swal.close();
-      if (response.data.err != "1") {
-        swal.close();
-        toast.success("Kết xuất Data thành công!");
-        window.open(baseURL + response.data.path);
+      swal.close()
+      if (response.data.err != '1') {
+        swal.close()
+        toast.success('Kết xuất Data thành công!')
+        window.open(baseURL + response.data.path)
       } else {
         swal.fire({
-          title: "Error!",
+          title: 'Error!',
           text: response.data.ms,
-          icon: "error",
-          confirmButtonText: "OK",
-        });
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
       }
     })
     .catch((error) => {
       if (error.status === 401) {
         swal.fire({
-          title: "Error!",
-          text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-        store.commit("gologout");
+          title: 'Error!',
+          text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+        store.commit('gologout')
       }
-    });
-};
+    })
+}
 
 //Sửa bản ghi
 const editProject = (project1) => {
-  submitted.value = false;
+  submitted.value = false
   if (project1.ProjectStatus != null) {
-    if (project1.ProjectStatus == "Chưa hoàn thành") {
-      project1.ProjectStatus = 0;
+    if (project1.ProjectStatus == 'Chưa hoàn thành') {
+      project1.ProjectStatus = 0
     }
-    if (project1.ProjectStatus == "Hoàn thành") {
-      project1.ProjectStatus = 1;
+    if (project1.ProjectStatus == 'Hoàn thành') {
+      project1.ProjectStatus = 1
     }
-    if (project1.ProjectStatus == "Không hoàn thành") {
-      project1.ProjectStatus = -1;
+    if (project1.ProjectStatus == 'Không hoàn thành') {
+      project1.ProjectStatus = -1
     }
   }
-  Project.value = project1;
-  headerDialog.value = "Sửa dự án";
-  isSaveProject.value = true;
-  displayBasic.value = true;
-};
+  Project.value = project1
+  headerDialog.value = 'Sửa dự án'
+  isSaveProject.value = true
+  displayBasic.value = true
+}
 //Thêm slide
 const saveProject = (isFormValid) => {
-  submitted.value = true;
-  
+  submitted.value = true
+
   if (!isFormValid) {
-    return;
+    return
   }
   if (!isSaveProject.value) {
     axios
-      .post(baseURL + "/api/Projects/AddProject", Project.value, config)
+      .post(baseURL + '/api/Projects/AddProject', Project.value, config)
       .then((response) => {
-        if (response.data.err != "1") {
-          swal.close();
-          toast.success("Thêm dự án thành công!");
-          loadProjectData(true);
-          closeDialog();
+        if (response.data.err != '1') {
+          swal.close()
+          toast.success('Thêm dự án thành công!')
+          loadProjectData(true)
+          closeDialog()
         } else {
           swal.fire({
-            title: "Error!",
+            title: 'Error!',
             text: response.data.ms,
-            icon: "error",
-            confirmButtonText: "OK",
-          });
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
         }
       })
       .catch((error) => {
-        swal.close();
+        swal.close()
         swal.fire({
-          title: "Error!",
-          text: "Có lỗi xảy ra, vui lòng kiểm tra lại!",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      });
+          title: 'Error!',
+          text: 'Có lỗi xảy ra, vui lòng kiểm tra lại!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      })
   } else {
     axios
-      .put(baseURL + "/api/Projects/UpdateProject", Project.value, config)
+      .put(baseURL + '/api/Projects/UpdateProject', Project.value, config)
       .then((response) => {
-        if (response.data.err != "1") {
-          swal.close();
-          toast.success("Sửa dự án thành công!");
-          loadProjectData(true);
-          closeDialog();
+        if (response.data.err != '1') {
+          swal.close()
+          toast.success('Sửa dự án thành công!')
+          loadProjectData(true)
+          closeDialog()
         } else {
-          console.log("LỖI A:", response);
+          console.log('LỖI A:', response)
           swal.fire({
-            title: "Error!",
+            title: 'Error!',
             text: response.data.ms,
-            icon: "error",
-            confirmButtonText: "OK",
-          });
+            icon: 'error',
+            confirmButtonText: 'OK'
+          })
         }
       })
       .catch((error) => {
-        swal.close();
+        swal.close()
         swal.fire({
-          title: "Error!",
-          text: "Có lỗi xảy ra, vui lòng kiểm tra lại!",
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      });
+          title: 'Error!',
+          text: 'Có lỗi xảy ra, vui lòng kiểm tra lại!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
+      })
   }
-};
+}
 
-const listImages = ref([]);
-const idImageSelected = ref(1);
+const listImages = ref([])
+const idImageSelected = ref(1)
 const openBasic = (str) => {
-  Project.value = {};
-  headerDialog.value = str;
-  submitted.value = false;
-  checkLang.value = true;
-  isSaveProject.value = false;
-  displayBasic.value = true;
-};
-const idSlideShowSelected = ref();
+  Project.value = {}
+  headerDialog.value = str
+  submitted.value = false
+  checkLang.value = true
+  isSaveProject.value = false
+  displayBasic.value = true
+}
+const idSlideShowSelected = ref()
 const openBasic1 = (str, value, check) => {
   if (check) {
     Stage.value = {
       ProjectId: value.ProjectId,
-      StageCode: "",
-      StageTarget: "",
+      StageCode: '',
+      StageTarget: '',
       StageStatus: 0,
       StageStart: null,
       StageEnd: null,
       StageCompleted: null,
-      StageDescription: "",
-    };
-    isSaveStage.value = false;
+      StageDescription: ''
+    }
+    isSaveStage.value = false
   } else {
     if (value.StageStatus != null) {
-      if (value.StageStatus == "Chưa hoàn thành") {
-        value.StageStatus = 0;
+      if (value.StageStatus == 'Chưa hoàn thành') {
+        value.StageStatus = 0
       }
-      if (value.StageStatus == "Hoàn thành") {
-        value.StageStatus = 1;
+      if (value.StageStatus == 'Hoàn thành') {
+        value.StageStatus = 1
       }
-      if (value.StageStatus == "Không hoàn thành") {
-        value.StageStatus = -1;
+      if (value.StageStatus == 'Không hoàn thành') {
+        value.StageStatus = -1
       }
     }
 
-    Stage.value = value;
-    Stage.value.StageCompleted = null;
-    isSaveStage.value = true;
+    Stage.value = value
+    Stage.value.StageCompleted = null
+    isSaveStage.value = true
   }
-  headerDialog1.value = str;
-  displayBasic1.value = true;
-};
+  headerDialog1.value = str
+  displayBasic1.value = true
+}
 
 const closeDialog = () => {
-  displayBasic.value = false;
-};
+  displayBasic.value = false
+}
 const closeDialog1 = () => {
-  images.value = [];
-  displayBasic1.value = false;
-};
+  images.value = []
+  displayBasic1.value = false
+}
 
 const renderTree = (Project, Stage) => {
-  let arrChils = [];
+  let arrChils = []
   Project.forEach((item) => {
     Stage.filter((x) => x.ProjectId == item.ProjectId).forEach((m) => {
-      if (!item.children) item.children = [];
-      item.children.push(m);
-    });
-    arrChils.push(item);
-  });
-  projects.value = arrChils;
-};
+      if (!item.children) item.children = []
+      item.children.push(m)
+    })
+    arrChils.push(item)
+  })
+  projects.value = arrChils
+}
 //Lấy dữ liệu SlideShow
 const loadProjectData = (rf) => {
   if (rf) {
-    (async () => {
+    ;(async () => {
       const res = await axios
         .post(
-          baseURL + "/api/Proc/CallProc",
+          baseURL + '/api/Proc/CallProc',
           {
-            proc: "Project_List",
-            par: [{ par: "m_SearchText", va: options.value.SearchText }],
+            proc: 'Project_List',
+            par: [{ par: 'm_SearchText', va: options.value.SearchText }]
           },
           config
         )
         .then((response) => {
-          let data = JSON.parse(response.data.data)[0];
+          let data = JSON.parse(response.data.data)[0]
 
-          if (isFirst.value) isFirst.value = false;
-          options.value.loading = false;
+          if (isFirst.value) isFirst.value = false
+          options.value.loading = false
           if (data.length > 0) {
             data.forEach((element) => {
               if (element.ProjectStart != null) {
-                element.ProjectStart = moment(
-                  new Date(element.ProjectStart)
-                ).format("DD/MM/YYYY ");
+                element.ProjectStart = moment(new Date(element.ProjectStart)).format('DD/MM/YYYY ')
               }
               if (element.ProjectEnd != null) {
-                element.ProjectEnd = moment(
-                  new Date(element.ProjectEnd)
-                ).format("DD/MM/YYYY ");
+                element.ProjectEnd = moment(new Date(element.ProjectEnd)).format('DD/MM/YYYY ')
               }
               if (element.ProjectCompleted != null) {
-                element.ProjectCompleted = moment(
-                  new Date(element.ProjectCompleted)
-                ).format("DD/MM/YYYY ");
+                element.ProjectCompleted = moment(new Date(element.ProjectCompleted)).format(
+                  'DD/MM/YYYY '
+                )
               }
 
               if (element.ProjectStatus != null) {
                 if (element.ProjectStatus == 0) {
-                  element.ProjectStatus = "Chưa hoàn thành";
+                  element.ProjectStatus = 'Chưa hoàn thành'
                 }
                 if (element.ProjectStatus == 1) {
-                  element.ProjectStatus = "Hoàn thành";
+                  element.ProjectStatus = 'Hoàn thành'
                 }
                 if (element.ProjectStatus == -1) {
-                  element.ProjectStatus = "Không hoàn thành";
+                  element.ProjectStatus = 'Không hoàn thành'
                 }
               } else {
-                element.ProjectStatus = "Chưa hoàn thành";
+                element.ProjectStatus = 'Chưa hoàn thành'
               }
-            });
+            })
           }
-          return data;
+          return data
         })
         .catch((error) => {
-          toast.error("Tải dữ liệu không thành công!");
-          options.value.loading = false;
+          toast.error('Tải dữ liệu không thành công!')
+          options.value.loading = false
 
           if (error && error.status === 401) {
             swal.fire({
-              title: "Error!",
-              text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-              icon: "error",
-              confirmButtonText: "OK",
-            });
-            store.commit("gologout");
+              title: 'Error!',
+              text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+              icon: 'error',
+              confirmButtonText: 'OK'
+            })
+            store.commit('gologout')
           }
-        });
+        })
       const res1 = await axios
         .post(
-          baseURL + "/api/Proc/CallProc",
+          baseURL + '/api/Proc/CallProc',
           {
-            proc: "Stage_List",
-            par: [{ par: "m_SearchText", va: options.value.SearchText }],
+            proc: 'Stage_List',
+            par: [{ par: 'm_SearchText', va: options.value.SearchText }]
           },
           config
         )
         .then((response) => {
-          let data = JSON.parse(response.data.data)[0];
+          let data = JSON.parse(response.data.data)[0]
 
-          if (isFirst.value) isFirst.value = false;
-          options.value.loading = false;
+          if (isFirst.value) isFirst.value = false
+          options.value.loading = false
           data.forEach((element) => {
             if (element.StageStart != null) {
-              element.StageStart = moment(new Date(element.StageStart)).format(
-                "DD/MM/YYYY "
-              );
+              element.StageStart = moment(new Date(element.StageStart)).format('DD/MM/YYYY ')
             }
             if (element.StageEnd != null) {
-              element.StageEnd = moment(new Date(element.StageEnd)).format(
-                "DD/MM/YYYY "
-              );
+              element.StageEnd = moment(new Date(element.StageEnd)).format('DD/MM/YYYY ')
             }
             if (element.StageCompleted != null) {
-              element.StageCompleted = moment(
-                new Date(element.StageCompleted)
-              ).format("DD/MM/YYYY ");
+              element.StageCompleted = moment(new Date(element.StageCompleted)).format(
+                'DD/MM/YYYY '
+              )
             }
             if (element.StageStatus != null) {
               if (element.StageStatus == 0) {
-                element.StageStatus = "Chưa hoàn thành";
+                element.StageStatus = 'Chưa hoàn thành'
               }
               if (element.StageStatus == 1) {
-                element.StageStatus = "Hoàn thành";
+                element.StageStatus = 'Hoàn thành'
               }
               if (element.StageStatus == -1) {
-                element.StageStatus = "Không hoàn thành";
+                element.StageStatus = 'Không hoàn thành'
               }
             } else {
-              element.StageStatus = "Chưa hoàn thành";
+              element.StageStatus = 'Chưa hoàn thành'
             }
-          });
+          })
 
-          return data;
+          return data
         })
         .catch((error) => {
-          toast.error("Tải dữ liệu không thành công!");
-          options.value.loading = false;
+          toast.error('Tải dữ liệu không thành công!')
+          options.value.loading = false
 
           if (error && error.status === 401) {
             swal.fire({
-              title: "Error!",
-              text: "Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!",
-              icon: "error",
-              confirmButtonText: "OK",
-            });
-            store.commit("gologout");
+              title: 'Error!',
+              text: 'Mã token đã hết hạn hoặc không hợp lệ, vui lòng đăng nhập lại!',
+              icon: 'error',
+              confirmButtonText: 'OK'
+            })
+            store.commit('gologout')
           }
-        });
+        })
 
-      renderTree(res, res1);
+      renderTree(res, res1)
 
-      options.value.loading = false;
-    })();
+      options.value.loading = false
+    })()
   }
-};
+}
 
 onMounted(() => {
-  loadProjectData(true);
+  loadProjectData(true)
 
   return {
     loadProjectData,
-    projects,
-  };
-});
+    projects
+  }
+})
 </script>
 
 <template>
@@ -916,12 +900,7 @@ onMounted(() => {
           aria-controls="overlay_Export"
         />
 
-        <Menu
-          id="overlay_Export"
-          ref="menuButs"
-          :model="itemButs"
-          :popup="true"
-        />
+        <Menu id="overlay_Export" ref="menuButs" :model="itemButs" :popup="true" />
       </template>
     </Toolbar>
 
@@ -962,12 +941,7 @@ onMounted(() => {
           header="Mã dự án"
           sortable
         ></Column>
-        <Column
-          sortable
-          field="ProjectName"
-          header="Tên dự án"
-          headerStyle="height:50px;"
-        ></Column>
+        <Column sortable field="ProjectName" header="Tên dự án" headerStyle="height:50px;"></Column>
 
         <Column
           headerStyle="text-align:center;max-width:150px;height:50px"
@@ -1143,13 +1117,7 @@ onMounted(() => {
         </template>
         <template #empty>
           <div
-            class="
-              align-items-center
-              justify-content-center
-              p-4
-              text-center
-              m-auto
-            "
+            class="align-items-center justify-content-center p-4 text-center m-auto"
             v-if="!isFirst"
           >
             <img src="../../assets/background/nodata.png" height="144" />
@@ -1165,13 +1133,12 @@ onMounted(() => {
     v-model:visible="displayBasic"
     :style="{ width: '40vw' }"
     :maximizable="true"
+    :closable="false"
   >
     <form>
       <div class="grid formgrid m-2">
         <div class="field col-12 md:col-12">
-          <label class="col-12 text-left p-0"
-            >Mã dự án <span class="redsao">(*)</span></label
-          >
+          <label class="col-12 text-left p-0">Mã dự án <span class="redsao">(*)</span></label>
           <InputText
             v-model="Project.ProjectCode"
             spellcheck="false"
@@ -1182,23 +1149,18 @@ onMounted(() => {
         <div class="field col-12 md:col-12">
           <div class="col-3 text-left"></div>
           <small
-            v-if="
-              (v$.ProjectCode.$invalid && submitted) ||
-              v$.ProjectCode.$pending.$response
-            "
+            v-if="(v$.ProjectCode.$invalid && submitted) || v$.ProjectCode.$pending.$response"
             class="col-9 p-0 p-error"
           >
             <span class="col-12 p-0">{{
               v$.ProjectCode.required.$message
-                .replace("Value", "Mã dự án")
-                .replace("is required", "không được để trống")
+                .replace('Value', 'Mã dự án')
+                .replace('is required', 'không được để trống')
             }}</span>
           </small>
         </div>
         <div class="field col-12 md:col-12">
-          <label class="col-12 text-left p-0"
-            >Tên dự án <span class="redsao">(*)</span></label
-          >
+          <label class="col-12 text-left p-0">Tên dự án <span class="redsao">(*)</span></label>
           <InputText
             v-model="Project.ProjectName"
             spellcheck="false"
@@ -1209,16 +1171,13 @@ onMounted(() => {
         <div class="field col-12 md:col-12">
           <div class="col-3 text-left"></div>
           <small
-            v-if="
-              (v$.ProjectName.$invalid && submitted) ||
-              v$.ProjectName.$pending.$response
-            "
+            v-if="(v$.ProjectName.$invalid && submitted) || v$.ProjectName.$pending.$response"
             class="col-9 p-0 p-error"
           >
             <span class="col-12 p-0">{{
               v$.ProjectName.required.$message
-                .replace("Value", "Tên dự án")
-                .replace("is required", "không được để trống")
+                .replace('Value', 'Tên dự án')
+                .replace('is required', 'không được để trống')
             }}</span>
           </small>
         </div>
@@ -1285,18 +1244,13 @@ onMounted(() => {
     </form>
     <template #footer>
       <Button
-        @click="closeDialog"
+        @click="closeDialog(), loadProjectData(true)"
         label="Hủy"
         icon="pi pi-times"
         class="p-button-text"
       />
 
-      <Button
-        @click="saveProject(!v$.$invalid)"
-        label="Lưu"
-        icon="pi pi-check"
-        autofocus
-      />
+      <Button @click="saveProject(!v$.$invalid)" label="Lưu" icon="pi pi-check" autofocus />
     </template>
   </Dialog>
   <Dialog
@@ -1304,31 +1258,20 @@ onMounted(() => {
     v-model:visible="displayBasic1"
     :style="{ width: '50vw' }"
     :maximizable="true"
+    :closable="false"
   >
     <form>
       <div class="grid formgrid m-2">
         <div class="field col-12 md:col-12">
-          <label class="col-12 text-left p-0"
-            >Mã giai đoạn <span class="redsao">(*)</span></label
-          >
-          <InputText
-            v-model="Stage.StageCode"
-            spellcheck="false"
-            class="col-12 ip36"
-          />
+          <label class="col-12 text-left p-0">Mã giai đoạn <span class="redsao">(*)</span></label>
+          <InputText v-model="Stage.StageCode" spellcheck="false" class="col-12 ip36" />
         </div>
         <div class="field col-12 md:col-12">
           <div class="col-3 text-left"></div>
         </div>
         <div class="field col-12 md:col-12">
-          <label class="col-12 text-left p-0"
-            >Mục tiêu<span class="redsao">(*)</span></label
-          >
-          <InputText
-            v-model="Stage.StageTarget"
-            spellcheck="false"
-            class="col-12 ip36"
-          />
+          <label class="col-12 text-left p-0">Mục tiêu<span class="redsao">(*)</span></label>
+          <InputText v-model="Stage.StageTarget" spellcheck="false" class="col-12 ip36" />
         </div>
 
         <div style="display: flex" class="p-0 col-12 field md:col-12 m-0">
@@ -1394,7 +1337,7 @@ onMounted(() => {
     </form>
     <template #footer>
       <Button
-        @click="closeDialog1"
+        @click="closeDialog1(), loadProjectData(true)"
         label="Hủy"
         icon="pi pi-times"
         class="p-button-text"

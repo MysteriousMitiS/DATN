@@ -34,5 +34,7 @@ namespace API.Models
         public Nullable<System.DateTime> Ngayduyet { get; set; }
         public string IPduyet { get; set; }
         public Nullable<int> IsType { get; set; }
+    
+        public virtual UserP UserP { get; set; }
     }
 }

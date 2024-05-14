@@ -4,17 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="377947006e1c425c926d8301fa17b45a" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.News" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Project" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Stage" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Sys_Token" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.UserP" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Work" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.WorkCheck" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.WorkUser" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+      <Diagram DiagramId="7062d5658c9e42d58d69b64597c3eb06" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="5.25" PointY="6.125" />
+        <EntityTypeShape EntityType="Model.News" Width="1.5" PointX="3" PointY="12.625" />
+        <EntityTypeShape EntityType="Model.Project" Width="1.5" PointX="1.5" PointY="23.75" />
+        <EntityTypeShape EntityType="Model.Stage" Width="1.5" PointX="1.5" PointY="18.5" />
+        <EntityTypeShape EntityType="Model.Sys_Token" Width="1.5" PointX="2.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="4.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Model.UserP" Width="1.5" PointX="0.75" PointY="6.375" />
+        <EntityTypeShape EntityType="Model.Work" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.WorkCheck" Width="1.5" PointX="5.25" PointY="9.25" />
+        <EntityTypeShape EntityType="Model.WorkUser" Width="1.5" PointX="3" PointY="7.375" />
+        <AssociationConnector Association="Model.fk_Comment_Check" />
+        <AssociationConnector Association="Model.FK_New_Userp" />
+        <AssociationConnector Association="Model.fk_Project_Stage" />
+        <AssociationConnector Association="Model.fk_Stage_Work" />
+        <AssociationConnector Association="Model.fk_UserP_WorkUser" />
+        <AssociationConnector Association="Model.fk_Work_WorkUser" />
+        <AssociationConnector Association="Model.fk_WorkUser_Check" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

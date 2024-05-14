@@ -14,6 +14,12 @@ namespace API.Models
     
     public partial class Stage
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Stage()
+        {
+            this.Works = new HashSet<Work>();
+        }
+    
         public int StageId { get; set; }
         public string StageCode { get; set; }
         public string StageTarget { get; set; }
@@ -27,5 +33,9 @@ namespace API.Models
         public string ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public int ProjectId { get; set; }
+    
+        public virtual Project Project { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Work> Works { get; set; }
     }
 }

@@ -1,79 +1,80 @@
 <script setup>
-import { inject, onMounted, ref } from "vue";
-import { decr } from "../util/function";
-const axios = inject("axios"); // inject axios
-const user = ref({ UserName: "", Password: "" });
-const errors = ref({ UserName: "", Password: "" });
-const store = inject("store");
-const swal = inject("$swal");
-const cryoptojs = inject("cryptojs");
+import router from '@/router'
+import { inject, onMounted, ref } from 'vue'
+import { decr } from '../util/function'
+const axios = inject('axios') // inject axios
+const user = ref({ UserName: '', Password: '' })
+const errors = ref({ UserName: '', Password: '' })
+const store = inject('store')
+const swal = inject('$swal')
+const cryoptojs = inject('cryptojs')
 const checkForm = () => {
   if (!user.value.UserName) {
-    errors.value.UserName = "Tên đăng nhập không được để trống!";
+    errors.value.UserName = 'Tên đăng nhập không được để trống!'
   } else {
-    errors.value.UserName = "";
+    errors.value.UserName = ''
   }
   if (!user.value.Password) {
-    errors.value.Password = "Mật khẩu không được để trống!";
+    errors.value.Password = 'Mật khẩu không được để trống!'
   } else if (user.value.Password.length < 8) {
-    errors.value.Password = "Mật khẩu không được ít hơn 8 ký tự!";
+    errors.value.Password = 'Mật khẩu không được ít hơn 8 ký tự!'
   } else {
-    errors.value.Password = "";
+    errors.value.Password = ''
   }
-};
+}
 const login = () => {
-  checkForm();
-  let form = document.getElementsByName("frlogin")[0];
-  let check = form.checkValidity();
+  checkForm()
+  let form = document.getElementsByName('frlogin')[0]
+  let check = form.checkValidity()
   if (!check) {
-    return false;
+    return false
   }
   // Light theme
   swal.fire({
     width: 110,
     didOpen: () => {
-      swal.showLoading();
-    },
-  });
+      swal.showLoading()
+    }
+  })
   axios
-    .post(baseURL + "/api/Login/Login", user.value)
+    .post(baseURL + '/api/Login/Login', user.value)
     .then((response) => {
-      if (response.data.err != "1") {
-      
-        localStorage.setItem("tk", response.data.data);
-        localStorage.setItem("u", response.data.u);
-        store.commit("setuser", JSON.parse(decr(response.data.u, SecretKey, cryoptojs)));
-        store.commit("settoken", response.data.data);
-        store.commit("setislogin", true);
-       
-        swal.close();
+      if (response.data.err != '1') {
+        router.push({ name: 'home' })
+        localStorage.setItem('tk', response.data.data)
+        localStorage.setItem('u', response.data.u)
+        store.commit('setuser', JSON.parse(decr(response.data.u, SecretKey, cryoptojs)))
+        store.commit('settoken', response.data.data)
+        store.commit('setislogin', true)
+
+        swal.close()
       } else {
-        console.log(response);
+        console.log(response)
         swal.fire({
-          title: "Error!",
+          title: 'Error!',
           text: response.data.ms,
-          icon: "error",
-          confirmButtonText: "OK",
-        });
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
       }
     })
     .catch((error) => {
       swal.fire({
-        title: "Error!",
-        text: "Có lỗi xảy ra, vui lòng kiểm tra lại!",
-        icon: "error",
-        confirmButtonText: "OK",
-      });
-    });
-};
+        title: 'Error!',
+        text: 'Có lỗi xảy ra, vui lòng kiểm tra lại!',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+    })
+}
 onMounted(() => {
   return {
     checkForm,
     login,
     user,
-    errors,
-  };
-});
+    errors
+  }
+})
 </script>
 <template>
   <div class="login-container">
@@ -146,7 +147,7 @@ input.invalid {
 }
 
 .login-bg > img {
- object-fit: cover;
+  object-fit: cover;
   width: calc(100% - 480px);
   height: 100%;
 }

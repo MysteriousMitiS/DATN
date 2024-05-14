@@ -4,171 +4,171 @@
     <EntitySetMapping Name="Comments">
       <EntityTypeMapping TypeName="Model.Comment">
         <MappingFragment StoreEntitySet="Comment">
-          <ScalarProperty Name="CommentId" ColumnName="CommentId" />
-          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CommentId" ColumnName="CommentId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="News">
       <EntityTypeMapping TypeName="Model.News">
         <MappingFragment StoreEntitySet="News">
-          <ScalarProperty Name="News_ID" ColumnName="News_ID" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="News_Name" ColumnName="News_Name" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
-          <ScalarProperty Name="Contents" ColumnName="Contents" />
-          <ScalarProperty Name="Details" ColumnName="Details" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-          <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
-          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
-          <ScalarProperty Name="STT" ColumnName="STT" />
-          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
-          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
-          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
-          <ScalarProperty Name="Nguoiduyet" ColumnName="Nguoiduyet" />
-          <ScalarProperty Name="Ngayduyet" ColumnName="Ngayduyet" />
-          <ScalarProperty Name="IPduyet" ColumnName="IPduyet" />
           <ScalarProperty Name="IsType" ColumnName="IsType" />
+          <ScalarProperty Name="IPduyet" ColumnName="IPduyet" />
+          <ScalarProperty Name="Ngayduyet" ColumnName="Ngayduyet" />
+          <ScalarProperty Name="Nguoiduyet" ColumnName="Nguoiduyet" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+          <ScalarProperty Name="Nguoicapnhat" ColumnName="Nguoicapnhat" />
+          <ScalarProperty Name="IPcapnhat" ColumnName="IPcapnhat" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+          <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="News_Name" ColumnName="News_Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="News_ID" ColumnName="News_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Projects">
       <EntityTypeMapping TypeName="Model.Project">
         <MappingFragment StoreEntitySet="Project">
-          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
-          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
-          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
-          <ScalarProperty Name="ProjectStart" ColumnName="ProjectStart" />
-          <ScalarProperty Name="ProjectEnd" ColumnName="ProjectEnd" />
-          <ScalarProperty Name="ProjectCompleted" ColumnName="ProjectCompleted" />
-          <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
-          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+          <ScalarProperty Name="ProjectCompleted" ColumnName="ProjectCompleted" />
+          <ScalarProperty Name="ProjectEnd" ColumnName="ProjectEnd" />
+          <ScalarProperty Name="ProjectStart" ColumnName="ProjectStart" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Stages">
       <EntityTypeMapping TypeName="Model.Stage">
         <MappingFragment StoreEntitySet="Stage">
-          <ScalarProperty Name="StageId" ColumnName="StageId" />
-          <ScalarProperty Name="StageCode" ColumnName="StageCode" />
-          <ScalarProperty Name="StageTarget" ColumnName="StageTarget" />
-          <ScalarProperty Name="StageStart" ColumnName="StageStart" />
-          <ScalarProperty Name="StageEnd" ColumnName="StageEnd" />
-          <ScalarProperty Name="StageCompleted" ColumnName="StageCompleted" />
-          <ScalarProperty Name="StageStatus" ColumnName="StageStatus" />
-          <ScalarProperty Name="StageDescription" ColumnName="StageDescription" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="StageDescription" ColumnName="StageDescription" />
+          <ScalarProperty Name="StageStatus" ColumnName="StageStatus" />
+          <ScalarProperty Name="StageCompleted" ColumnName="StageCompleted" />
+          <ScalarProperty Name="StageEnd" ColumnName="StageEnd" />
+          <ScalarProperty Name="StageStart" ColumnName="StageStart" />
+          <ScalarProperty Name="StageTarget" ColumnName="StageTarget" />
+          <ScalarProperty Name="StageCode" ColumnName="StageCode" />
+          <ScalarProperty Name="StageId" ColumnName="StageId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Sys_Token">
       <EntityTypeMapping TypeName="Model.Sys_Token">
         <MappingFragment StoreEntitySet="Sys_Token">
-          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-          <ScalarProperty Name="NgayHet" ColumnName="NgayHet" />
-          <ScalarProperty Name="FromDivice" ColumnName="FromDivice" />
-          <ScalarProperty Name="IP" ColumnName="IP" />
           <ScalarProperty Name="isDecentlz" ColumnName="isDecentlz" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="FromDivice" ColumnName="FromDivice" />
+          <ScalarProperty Name="NgayHet" ColumnName="NgayHet" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="Model.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserPs">
       <EntityTypeMapping TypeName="Model.UserP">
         <MappingFragment StoreEntitySet="UserP">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Position" ColumnName="Position" />
-          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-          <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="KeyEncript" ColumnName="KeyEncript" />
-          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
-          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
-          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
           <ScalarProperty Name="isDecentlz" ColumnName="isDecentlz" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Token_ID" ColumnName="Token_ID" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="KeyEncript" ColumnName="KeyEncript" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Works">
       <EntityTypeMapping TypeName="Model.Work">
         <MappingFragment StoreEntitySet="Work">
-          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
-          <ScalarProperty Name="StageId" ColumnName="StageId" />
-          <ScalarProperty Name="WorkCode" ColumnName="WorkCode" />
-          <ScalarProperty Name="WorkName" ColumnName="WorkName" />
-          <ScalarProperty Name="WorkStart" ColumnName="WorkStart" />
-          <ScalarProperty Name="WorkEnd" ColumnName="WorkEnd" />
-          <ScalarProperty Name="WorkCompleted" ColumnName="WorkCompleted" />
-          <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
-          <ScalarProperty Name="WorkDescription" ColumnName="WorkDescription" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="WorkImage" ColumnName="WorkImage" />
           <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="WorkImage" ColumnName="WorkImage" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="WorkDescription" ColumnName="WorkDescription" />
+          <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
+          <ScalarProperty Name="WorkCompleted" ColumnName="WorkCompleted" />
+          <ScalarProperty Name="WorkEnd" ColumnName="WorkEnd" />
+          <ScalarProperty Name="WorkStart" ColumnName="WorkStart" />
+          <ScalarProperty Name="WorkName" ColumnName="WorkName" />
+          <ScalarProperty Name="WorkCode" ColumnName="WorkCode" />
+          <ScalarProperty Name="StageId" ColumnName="StageId" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WorkChecks">
       <EntityTypeMapping TypeName="Model.WorkCheck">
         <MappingFragment StoreEntitySet="WorkCheck">
-          <ScalarProperty Name="WorkCheckId" ColumnName="WorkCheckId" />
-          <ScalarProperty Name="CheckResult" ColumnName="CheckResult" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CheckResult" ColumnName="CheckResult" />
+          <ScalarProperty Name="WorkCheckId" ColumnName="WorkCheckId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WorkUsers">
       <EntityTypeMapping TypeName="Model.WorkUser">
         <MappingFragment StoreEntitySet="WorkUser">
-          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="WorkRole" ColumnName="WorkRole" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="WorkRole" ColumnName="WorkRole" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

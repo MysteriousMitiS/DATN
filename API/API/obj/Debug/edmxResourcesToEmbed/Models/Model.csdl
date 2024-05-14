@@ -1,5 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comments" EntityType="Model.Comment" />
+    <EntitySet Name="News" EntityType="Model.News" />
+    <EntitySet Name="Projects" EntityType="Model.Project" />
+    <EntitySet Name="Stages" EntityType="Model.Stage" />
+    <EntitySet Name="Sys_Token" EntityType="Model.Sys_Token" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
+    <EntitySet Name="UserPs" EntityType="Model.UserP" />
+    <EntitySet Name="Works" EntityType="Model.Work" />
+    <EntitySet Name="WorkChecks" EntityType="Model.WorkCheck" />
+    <EntitySet Name="WorkUsers" EntityType="Model.WorkUser" />
+    <AssociationSet Name="fk_Comment_Check" Association="Model.fk_Comment_Check">
+      <End Role="WorkUser" EntitySet="WorkUsers" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_New_Userp" Association="Model.FK_New_Userp">
+      <End Role="UserP" EntitySet="UserPs" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Project_Stage" Association="Model.fk_Project_Stage">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Stage" EntitySet="Stages" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Stage_Work" Association="Model.fk_Stage_Work">
+      <End Role="Stage" EntitySet="Stages" />
+      <End Role="Work" EntitySet="Works" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserP_WorkUser" Association="Model.fk_UserP_WorkUser">
+      <End Role="UserP" EntitySet="UserPs" />
+      <End Role="WorkUser" EntitySet="WorkUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Work_WorkUser" Association="Model.fk_Work_WorkUser">
+      <End Role="Work" EntitySet="Works" />
+      <End Role="WorkUser" EntitySet="WorkUsers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_WorkUser_Check" Association="Model.fk_WorkUser_Check">
+      <End Role="WorkUser" EntitySet="WorkUsers" />
+      <End Role="WorkCheck" EntitySet="WorkChecks" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Comment">
     <Key>
       <PropertyRef Name="CommentId" />
@@ -10,6 +50,7 @@
     <Property Name="CreatedDate" Type="DateTime" Precision="0" />
     <Property Name="WorkId" Type="Int32" Nullable="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="WorkUser" Relationship="Model.fk_Comment_Check" FromRole="Comment" ToRole="WorkUser" />
   </EntityType>
   <EntityType Name="News">
     <Key>
@@ -35,6 +76,7 @@
     <Property Name="Ngayduyet" Type="DateTime" Precision="3" />
     <Property Name="IPduyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="IsType" Type="Int32" />
+    <NavigationProperty Name="UserP" Relationship="Model.FK_New_Userp" FromRole="News" ToRole="UserP" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
@@ -52,6 +94,7 @@
     <Property Name="CreatedDate" Type="DateTime" Precision="0" />
     <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Stages" Relationship="Model.fk_Project_Stage" FromRole="Project" ToRole="Stage" />
   </EntityType>
   <EntityType Name="Stage">
     <Key>
@@ -70,12 +113,14 @@
     <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
     <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Project" Relationship="Model.fk_Project_Stage" FromRole="Stage" ToRole="Project" />
+    <NavigationProperty Name="Works" Relationship="Model.fk_Stage_Work" FromRole="Stage" ToRole="Work" />
   </EntityType>
   <EntityType Name="Sys_Token">
     <Key>
       <PropertyRef Name="Token_ID" />
     </Key>
-    <Property Name="Token_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Token_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Ngay" Type="DateTime" Precision="3" />
@@ -88,7 +133,7 @@
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -99,10 +144,10 @@
       <PropertyRef Name="UserId" />
     </Key>
     <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserCode" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Position" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="UserAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
@@ -117,6 +162,8 @@
     <Property Name="Token_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="isDecentlz" Type="Int32" />
+    <NavigationProperty Name="News" Relationship="Model.FK_New_Userp" FromRole="UserP" ToRole="News" />
+    <NavigationProperty Name="WorkUsers" Relationship="Model.fk_UserP_WorkUser" FromRole="UserP" ToRole="WorkUser" />
   </EntityType>
   <EntityType Name="Work">
     <Key>
@@ -137,6 +184,8 @@
     <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
     <Property Name="WorkImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="STT" Type="Int32" />
+    <NavigationProperty Name="Stage" Relationship="Model.fk_Stage_Work" FromRole="Work" ToRole="Stage" />
+    <NavigationProperty Name="WorkUsers" Relationship="Model.fk_Work_WorkUser" FromRole="Work" ToRole="WorkUser" />
   </EntityType>
   <EntityType Name="WorkCheck">
     <Key>
@@ -148,6 +197,7 @@
     <Property Name="CreatedDate" Type="DateTime" Precision="0" />
     <Property Name="WorkId" Type="Int32" Nullable="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="WorkUser" Relationship="Model.fk_WorkUser_Check" FromRole="WorkCheck" ToRole="WorkUser" />
   </EntityType>
   <EntityType Name="WorkUser">
     <Key>
@@ -161,17 +211,111 @@
     <Property Name="CreatedDate" Type="DateTime" Precision="0" />
     <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Comments" Relationship="Model.fk_Comment_Check" FromRole="WorkUser" ToRole="Comment" />
+    <NavigationProperty Name="UserP" Relationship="Model.fk_UserP_WorkUser" FromRole="WorkUser" ToRole="UserP" />
+    <NavigationProperty Name="Work" Relationship="Model.fk_Work_WorkUser" FromRole="WorkUser" ToRole="Work" />
+    <NavigationProperty Name="WorkChecks" Relationship="Model.fk_WorkUser_Check" FromRole="WorkUser" ToRole="WorkCheck" />
   </EntityType>
-  <EntityContainer Name="DbEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Comments" EntityType="Self.Comment" />
-    <EntitySet Name="News" EntityType="Self.News" />
-    <EntitySet Name="Projects" EntityType="Self.Project" />
-    <EntitySet Name="Stages" EntityType="Self.Stage" />
-    <EntitySet Name="Sys_Token" EntityType="Self.Sys_Token" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="UserPs" EntityType="Self.UserP" />
-    <EntitySet Name="Works" EntityType="Self.Work" />
-    <EntitySet Name="WorkChecks" EntityType="Self.WorkCheck" />
-    <EntitySet Name="WorkUsers" EntityType="Self.WorkUser" />
-  </EntityContainer>
+  <Association Name="fk_Comment_Check">
+    <End Type="Model.WorkUser" Role="WorkUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.Comment" Role="Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_New_Userp">
+    <End Type="Model.UserP" Role="UserP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.News" Role="News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserP">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Project_Stage">
+    <End Type="Model.Project" Role="Project" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.Stage" Role="Stage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="Stage">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Stage_Work">
+    <End Type="Model.Stage" Role="Stage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.Work" Role="Work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stage">
+        <PropertyRef Name="StageId" />
+      </Principal>
+      <Dependent Role="Work">
+        <PropertyRef Name="StageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserP_WorkUser">
+    <End Type="Model.UserP" Role="UserP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.WorkUser" Role="WorkUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserP">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="WorkUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Work_WorkUser">
+    <End Type="Model.Work" Role="Work" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.WorkUser" Role="WorkUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Work">
+        <PropertyRef Name="WorkId" />
+      </Principal>
+      <Dependent Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_WorkUser_Check">
+    <End Type="Model.WorkUser" Role="WorkUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model.WorkCheck" Role="WorkCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkUser">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="WorkCheck">
+        <PropertyRef Name="WorkId" />
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

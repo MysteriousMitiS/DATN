@@ -14,6 +14,13 @@ namespace API.Models
     
     public partial class UserP
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserP()
+        {
+            this.News = new HashSet<News>();
+            this.WorkUsers = new HashSet<WorkUser>();
+        }
+    
         public int UserId { get; set; }
         public string UserCode { get; set; }
         public string Name { get; set; }
@@ -33,5 +40,10 @@ namespace API.Models
         public string Token_ID { get; set; }
         public string Avatar { get; set; }
         public Nullable<int> isDecentlz { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<News> News { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkUser> WorkUsers { get; set; }
     }
 }

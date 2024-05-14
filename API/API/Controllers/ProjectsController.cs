@@ -151,9 +151,6 @@ namespace API.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK, new { ms = contents, err = "1" });
             }
         }
-
-
-
         [HttpDelete]
         public async Task<HttpResponseMessage> DeleteProject([FromBody] List<int> id)
         {

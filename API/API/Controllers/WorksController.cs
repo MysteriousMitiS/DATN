@@ -117,7 +117,8 @@ namespace API.Controllers
                             work.WorkImage = "/Portals/Work/" + fileName;
                             ffileData = fileData;
                         }
-                
+                        work.CreatedBy = uid;
+                        work.CreatedDate = DateTime.Today;
                         db.Works.Add(work);
                         db.SaveChanges();
                         //Add ảnh
@@ -249,7 +250,8 @@ namespace API.Controllers
                             ffileData = fileData;
                         }
 
-                    
+                        work.ModifiedBy = uid;
+                        work.ModifiedDate = DateTime.Today;
                         db.Entry(work).State = EntityState.Modified;
                         db.SaveChanges();
                         //Add ảnh

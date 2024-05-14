@@ -71,10 +71,8 @@ namespace Controllers
                         }
                     }
                     var arrpas = sqlpas.ToArray();
-                    DateTime sdate = DateTime.Now;
                     var task = Task.Run(() => SqlHelper.ExecuteDataset(Connection, proc.proc, arrpas).Tables);
                     var tables = await task;
-                    DateTime edate = DateTime.Now;
                     
                     string JSONresult = JsonConvert.SerializeObject(tables);
                     return Request.CreateResponse(HttpStatusCode.OK, new { data = JSONresult, err = "0" });
