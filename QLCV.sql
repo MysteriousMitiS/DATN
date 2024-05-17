@@ -1,6 +1,92 @@
-﻿USE [QuanLyDuAn]
+﻿USE [master]
 GO
-/****** Object:  User [devMitis]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Database [QuanLyDuAn]    Script Date: 17/05/2024 11:16:33 CH ******/
+CREATE DATABASE [QuanLyDuAn]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'QuanLyDuAn', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\QuanLyDuAn.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'QuanLyDuAn_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\QuanLyDuAn_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [QuanLyDuAn] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [QuanLyDuAn].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [QuanLyDuAn] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [QuanLyDuAn] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [QuanLyDuAn] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [QuanLyDuAn] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [QuanLyDuAn] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET RECOVERY FULL 
+GO
+ALTER DATABASE [QuanLyDuAn] SET  MULTI_USER 
+GO
+ALTER DATABASE [QuanLyDuAn] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [QuanLyDuAn] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [QuanLyDuAn] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [QuanLyDuAn] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [QuanLyDuAn] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [QuanLyDuAn] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'QuanLyDuAn', N'ON'
+GO
+ALTER DATABASE [QuanLyDuAn] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [QuanLyDuAn] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+ALTER AUTHORIZATION ON DATABASE::[QuanLyDuAn] TO [devMitis]
+GO
+USE [QuanLyDuAn]
+GO
+/****** Object:  User [devMitis]    Script Date: 17/05/2024 11:16:34 CH ******/
 CREATE USER [devMitis] FOR LOGIN [devMitis] WITH DEFAULT_SCHEMA=[dbo]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [devMitis]
@@ -9,7 +95,7 @@ ALTER ROLE [db_datareader] ADD MEMBER [devMitis]
 GO
 ALTER ROLE [db_datawriter] ADD MEMBER [devMitis]
 GO
-/****** Object:  Table [dbo].[Comment]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[Comment]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,7 +115,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[Comment] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[News]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[News]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -63,7 +149,7 @@ CREATE TABLE [dbo].[News](
 GO
 ALTER AUTHORIZATION ON [dbo].[News] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[Project]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[Project]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -89,7 +175,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[Project] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[Stage]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[Stage]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -116,7 +202,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[Stage] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[Sys_Token]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[Sys_Token]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -138,7 +224,7 @@ CREATE TABLE [dbo].[Sys_Token](
 GO
 ALTER AUTHORIZATION ON [dbo].[Sys_Token] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[UserP]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[UserP]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -171,7 +257,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[UserP] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[Work]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[Work]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -200,7 +286,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[Work] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[WorkCheck]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[WorkCheck]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -220,7 +306,7 @@ PRIMARY KEY CLUSTERED
 GO
 ALTER AUTHORIZATION ON [dbo].[WorkCheck] TO  SCHEMA OWNER 
 GO
-/****** Object:  Table [dbo].[WorkUser]    Script Date: 15/05/2024 03:44:32 SA ******/
+/****** Object:  Table [dbo].[WorkUser]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -282,7 +368,7 @@ GO
 SET IDENTITY_INSERT [dbo].[UserP] ON 
 
 INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (14, N'AD1', N'Administrator', N'Administrator', N'27dX9UHOd8QeJrugykfMeA==', N'Tổng giám đốc ', NULL, NULL, NULL, N'Hội đồng quản trị', N'administrator', CAST(N'2022-05-07' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 1, NULL, N'/Portals/Users/9734139295.jpg', 6)
-INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (15, N'NV01', N'Nguyễn Hoàng', N'hoangnb', N'Iq6KnnNcx6xG1VRihIszKw==', N'Nhân viên', N'0336872725', NULL, N'hoangnb1203@gmail.com                             ', N'Kế toán', N'administrator', CAST(N'2022-05-07' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 0, NULL, N'/Portals/Users/973413.jpg', 6)
+INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (15, N'NV01', N'Nguyễn Hoàng', N'hoangnb', N'Iq6KnnNcx6xG1VRihIszKw==', N'Nhân viên', N'0336872725', NULL, N'hoangnb1203@gmail.com                             ', N'Kế toán', N'administrator', CAST(N'2022-05-07' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 0, NULL, N'/Portals/Users/973413.jpg', 3)
 INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (16, N'NS-001', N'Hứa Văn Đức', N'Huavanduc', N'27dX9UHOd8QeJrugykfMeA==', N'Quản lý', N'0355565545', NULL, N'emtestma@gmail.com                                ', N'Tài chính', N'administrator', CAST(N'2022-05-09' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 1, NULL, N'/Portals/Users/670098.jpg', 6)
 INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (19, N'NV-001', N'Lê Văn Hạnh', N'hanhlv', N'GuXbbvJk1pcM+2O32osddFrWn4dPlAuZSE86+FXUnqg=', N'Tổng giám đốc ', NULL, NULL, NULL, N'Hội đồng quản trị', N'administrator', CAST(N'2022-05-12' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 1, NULL, N'/Portals/Users/670098.jpg', 6)
 INSERT [dbo].[UserP] ([UserId], [UserCode], [Name], [UserName], [Password], [Position], [PhoneNumber], [UserAddress], [Email], [DepartmentName], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [KeyEncript], [IsAdmin], [Token_ID], [Avatar], [isDecentlz]) VALUES (20, N'NV-002', N'Vũ Văn Thuyên', N'Thuyenvv', N'Iq6KnnNcx6xG1VRihIszKw==', N'Tổng giám đốc ', N'3213213   ', NULL, N'123123123                                         ', N'2', N'administrator', CAST(N'2022-05-12' AS Date), NULL, NULL, N'MTAxMjE5ODgxNTAyMTk4OQ==', 0, NULL, N'/Portals/Users/GearVN_Ghostblade_ (8).jpg', 5)
@@ -294,22 +380,16 @@ SET IDENTITY_INSERT [dbo].[UserP] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Work] ON 
 
-INSERT [dbo].[Work] ([WorkId], [StageId], [WorkCode], [WorkName], [WorkStart], [WorkEnd], [WorkCompleted], [WorkStatus], [WorkDescription], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [WorkImage], [STT]) VALUES (54, 15, N'KS01', N'Khảo sát yêu cầu người dùng', CAST(N'2024-05-15' AS Date), CAST(N'2024-05-31' AS Date), NULL, 0, N'', NULL, NULL, N'administrator', CAST(N'2024-05-15' AS Date), N'', 1)
-INSERT [dbo].[Work] ([WorkId], [StageId], [WorkCode], [WorkName], [WorkStart], [WorkEnd], [WorkCompleted], [WorkStatus], [WorkDescription], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [WorkImage], [STT]) VALUES (55, 15, N'KS02', N'KS Hệ thống', NULL, NULL, NULL, 0, N'', NULL, NULL, NULL, NULL, N'', 2)
+INSERT [dbo].[Work] ([WorkId], [StageId], [WorkCode], [WorkName], [WorkStart], [WorkEnd], [WorkCompleted], [WorkStatus], [WorkDescription], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate], [WorkImage], [STT]) VALUES (1056, 15, N'CV01', N'Công việc test', CAST(N'2024-05-17' AS Date), CAST(N'2024-05-16' AS Date), CAST(N'2024-05-17' AS Date), 5, N'Chờ Duyệt', N'administrator', CAST(N'2024-05-17' AS Date), N'hoangnb', CAST(N'2024-05-17' AS Date), N'', 1)
 SET IDENTITY_INSERT [dbo].[Work] OFF
 GO
 SET IDENTITY_INSERT [dbo].[WorkCheck] ON 
 
-INSERT [dbo].[WorkCheck] ([WorkCheckId], [CheckResult], [CreatedBy], [CreatedDate], [WorkId], [UserId]) VALUES (171, -1, N'administrator', CAST(N'2024-05-15' AS Date), 55, 15)
-INSERT [dbo].[WorkCheck] ([WorkCheckId], [CheckResult], [CreatedBy], [CreatedDate], [WorkId], [UserId]) VALUES (174, -1, N'administrator', CAST(N'2024-05-15' AS Date), 54, 15)
-INSERT [dbo].[WorkCheck] ([WorkCheckId], [CheckResult], [CreatedBy], [CreatedDate], [WorkId], [UserId]) VALUES (175, -1, N'administrator', CAST(N'2024-05-15' AS Date), 54, 16)
+INSERT [dbo].[WorkCheck] ([WorkCheckId], [CheckResult], [CreatedBy], [CreatedDate], [WorkId], [UserId]) VALUES (1179, 2, N'administrator', CAST(N'2024-05-17' AS Date), 1056, 14)
 SET IDENTITY_INSERT [dbo].[WorkCheck] OFF
 GO
-INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (54, 14, 0, N'administrator', CAST(N'2024-05-15' AS Date), NULL, NULL)
-INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (54, 15, 1, N'administrator', CAST(N'2024-05-15' AS Date), NULL, NULL)
-INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (54, 16, 1, N'administrator', CAST(N'2024-05-15' AS Date), NULL, NULL)
-INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (55, 15, 1, N'administrator', CAST(N'2024-05-15' AS Date), NULL, NULL)
-INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (55, 16, 0, N'administrator', CAST(N'2024-05-15' AS Date), NULL, NULL)
+INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (1056, 14, 1, N'hoangnb', CAST(N'2024-05-17' AS Date), NULL, NULL)
+INSERT [dbo].[WorkUser] ([WorkId], [UserId], [WorkRole], [CreatedBy], [CreatedDate], [ModifiedBy], [ModifiedDate]) VALUES (1056, 15, 0, N'hoangnb', CAST(N'2024-05-17' AS Date), NULL, NULL)
 GO
 ALTER TABLE [dbo].[Comment]  WITH NOCHECK ADD  CONSTRAINT [fk_Comment_Check] FOREIGN KEY([WorkId], [UserId])
 REFERENCES [dbo].[WorkUser] ([WorkId], [UserId])
@@ -353,7 +433,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[WorkUser] CHECK CONSTRAINT [fk_Work_WorkUser]
 GO
-/****** Object:  StoredProcedure [dbo].[MyWork_Export]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[MyWork_Export]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -383,7 +463,7 @@ WHERE UserId= (select UserId
 GO
 ALTER AUTHORIZATION ON [dbo].[MyWork_Export] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[News_Count]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[News_Count]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -398,7 +478,7 @@ where (@Search is null or (@Search is not null and News_Name like N'%'+@Search+'
 GO
 ALTER AUTHORIZATION ON [dbo].[News_Count] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[News_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[News_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -416,7 +496,7 @@ OFFSET (@PageNo-1)*@PageSize Rows FETCH NEXT @PageSize Rows ONLY
 GO
 ALTER AUTHORIZATION ON [dbo].[News_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[News_List_Show]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[News_List_Show]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -437,7 +517,7 @@ OFFSET (@PageNo-1)*@PageSize Rows FETCH NEXT @PageSize Rows ONLY
 GO
 ALTER AUTHORIZATION ON [dbo].[News_List_Show] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[News_ListExport]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[News_ListExport]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -454,7 +534,7 @@ where (@Search is null or (@Search is not null and (News_Name like N'%'+@Search+
 GO
 ALTER AUTHORIZATION ON [dbo].[News_ListExport] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Notification_List_Show]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Notification_List_Show]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -476,7 +556,7 @@ OFFSET (@PageNo-1)*@PageSize Rows FETCH NEXT @PageSize Rows ONLY
 GO
 ALTER AUTHORIZATION ON [dbo].[Notification_List_Show] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Project_Get]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Project_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -490,7 +570,7 @@ WHERE ProjectId=@ProjectId
 GO
 ALTER AUTHORIZATION ON [dbo].[Project_Get] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Project_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Project_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -504,22 +584,26 @@ WHERE ( @m_SearchText is null or ( @m_SearchText is not null and( ProjectCode LI
 GO
 ALTER AUTHORIZATION ON [dbo].[Project_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Project_List_User]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Project_List_User]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create   proc [dbo].[Project_List_User]
+CREATE   proc [dbo].[Project_List_User]
     @m_SearchText nvARCHAR(500),
     @UserName VARCHAR(50)
 as
 select *
 from Project
-WHERE CreatedBy=@UserName
+WHERE CreatedBy=@UserName or ( 
+		ProjectId in 
+		(select ProjectId from Stage where StageId in
+			(select StageId from work where WorkId in 
+				(select WorkId from WorkUser where UserId=(select UserId from UserP where UserName=@UserName)))))
 GO
 ALTER AUTHORIZATION ON [dbo].[Project_List_User] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Project_ListExport]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Project_ListExport]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -537,7 +621,7 @@ WHERE ( @m_SearchText is null or ( @m_SearchText is not null and( ProjectCode LI
 GO
 ALTER AUTHORIZATION ON [dbo].[Project_ListExport] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Stage_Get]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Stage_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -551,7 +635,7 @@ WHERE @StageId=StageId
 GO
 ALTER AUTHORIZATION ON [dbo].[Stage_Get] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Stage_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Stage_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -564,7 +648,7 @@ from Stage
 GO
 ALTER AUTHORIZATION ON [dbo].[Stage_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Stage_ListWithId]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Stage_ListWithId]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -579,7 +663,7 @@ WHERE ProjectId=@Id and( @m_SearchText is null or ( @m_SearchText is not null an
 GO
 ALTER AUTHORIZATION ON [dbo].[Stage_ListWithId] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Users_Count]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Users_Count]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -593,7 +677,7 @@ and (@IsAdmin is null or  @IsAdmin =0 or @IsAdmin=1)
 GO
 ALTER AUTHORIZATION ON [dbo].[Users_Count] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Users_Get]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Users_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -607,7 +691,7 @@ where UserName=@UserName
 GO
 ALTER AUTHORIZATION ON [dbo].[Users_Get] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Users_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Users_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -624,7 +708,7 @@ offset ((@PageNo-1)*@PageSize) rows fetch next  @PageSize rows only
 GO
 ALTER AUTHORIZATION ON [dbo].[Users_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Users_ListExport]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Users_ListExport]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -647,7 +731,7 @@ begin
 GO
 ALTER AUTHORIZATION ON [dbo].[Users_ListExport] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Users_ListWork]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Users_ListWork]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -659,7 +743,7 @@ from UserP
 GO
 ALTER AUTHORIZATION ON [dbo].[Users_ListWork] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Work_Get]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Work_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -673,7 +757,7 @@ WHERE WorkCode=@WorkCode
 GO
 ALTER AUTHORIZATION ON [dbo].[Work_Get] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[Work_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[Work_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -692,7 +776,7 @@ WHERE @StageId=StageId and ( @m_SearchText is null or ( @m_SearchText is not nul
 GO
 ALTER AUTHORIZATION ON [dbo].[Work_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[WorkCheck_Get]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[WorkCheck_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -706,7 +790,18 @@ WHERE @WorkId= WorkId
 GO
 ALTER AUTHORIZATION ON [dbo].[WorkCheck_Get] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[YourCheck_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[YourCheck_Get]    Script Date: 17/05/2024 11:16:34 CH ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create   proc [dbo].[YourCheck_Get] @WorkId int
+as 
+select * from Work where @WorkId=WorkId 
+GO
+ALTER AUTHORIZATION ON [dbo].[YourCheck_Get] TO  SCHEMA OWNER 
+GO
+/****** Object:  StoredProcedure [dbo].[YourCheck_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -723,7 +818,9 @@ SELECT *,
     where st.StageId=w.StageId ) )as ProjectName,
     (select st.StageTarget
     from Stage st
-    where st.StageId=w.StageId ) as StageTarget
+    where st.StageId=w.StageId ) as StageTarget,
+	(select UserId from WorkUser wu where wu.WorkId=w.WorkId and wu.WorkRole=0) as UserId,
+	(select CheckResult from WorkCheck where WorkId=w.WorkId and UserId= (select UserId from UserP where UserName=@UserName)) as CheckResult
 from Work  w
 WHERE WorkId in ( select WorkId
 from WorkUser
@@ -733,7 +830,7 @@ WHERE UserId= (select UserId
 GO
 ALTER AUTHORIZATION ON [dbo].[YourCheck_List] TO  SCHEMA OWNER 
 GO
-/****** Object:  StoredProcedure [dbo].[YourWork_List]    Script Date: 15/05/2024 03:44:33 SA ******/
+/****** Object:  StoredProcedure [dbo].[YourWork_List]    Script Date: 17/05/2024 11:16:34 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -750,7 +847,8 @@ SELECT *,
     where st.StageId=w.StageId ) )as ProjectName,
     (select st.StageTarget
     from Stage st
-    where st.StageId=w.StageId ) as StageTarget
+    where st.StageId=w.StageId ) as StageTarget,
+	(select UserId from WorkUser wu where wu.WorkId=w.WorkId and wu.WorkRole=0) as UserId 
 from Work  w
 WHERE WorkId in ( select WorkId
 from WorkUser
@@ -960,6 +1058,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Người cập
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ngày cập nhật' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WorkUser', @level2type=N'COLUMN',@level2name=N'ModifiedDate'
 GO
-create or alter proc YourCheck_Get @WorkId int
-as 
-select * from Work where @WorkId=WorkId 
+USE [master]
+GO
+ALTER DATABASE [QuanLyDuAn] SET  READ_WRITE 
+GO
